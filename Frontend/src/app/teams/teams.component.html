@@ -1,52 +1,60 @@
 <div class="pt-3 space-y-5 h-full overflow-hidden flex flex-col">
-    <div class="flex items-center justify-between px-6">
-        <h1 class="font-bold text-3xl text-slate-900 tracking-tight">Team Management</h1>
-        <button (click)="addOrEditTeam(null)"
-            class="flex gap-2 items-center p-2 border border-slate-400 rounded-lg bg-primary-600 text-white shadow-lg shadow-primary-200">
-            <i class="fa fa-plus text-xs"></i>Create team</button>
+  <div class="flex items-center justify-between px-6">
+    <h1 class="font-bold text-3xl text-slate-900 tracking-tight">Team Management</h1>
+    <button (click)="addOrEditTeam(null)"
+      class="flex gap-2 items-center p-2 border border-slate-400 rounded-lg bg-primary-600 text-white shadow-lg shadow-primary-200">
+      <i class="fa fa-plus text-xs"></i>Create team</button>
     </div>
     <div class="overflow-auto flex flex-col flex-1 px-6">
-        <div class="grid  lg:grid-cols-2 grid-cols-1 gap-6">
-            <ng-container *ngFor="let item of teamsData">
-                <div class="rounded-[1rem] border border-slate-300 p-6 space-y-6 group hover:shadow-md shadow-slate-300">
-                    <div class="flex items-center justify-between">
-                        <div class="flex space-x-4 items-center">
-                        <div>
-                            <div class="text-violet-600 border border-slate-50 rounded-lg bg-slate-50 px-3 py-2">
-                                <i class="fa fa-users-gear text-xl"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="font-bold text-lg text-slate-800">{{item.teamName}}</p>
-                            <p class="text-slate-500 font-bold text-sm">{{item.totalCount}} Members &nbsp; •  &nbsp;Active</p>
-                        </div> 
-                    </div>
-                     <button (click)="addOrEditTeam(item)"> <i class="fa fa-pencil text-slate-300 hover:text-primary-400 opacity-0 group-hover:opacity-100"></i></button>
-                    </div>
-                    <div class="flex items-center justify-between border-b pb-8">
-                        <div class="font-bold text-xs text-slate-500 tracking-[1px] uppercase">Team Lead</div>
-                        <div class="flex gap-1 items-center justify-center">
-                            <div class="uppercase w-7 h-7 flex items-center justify-center rounded-full text-[10px] font-bold text-white bg-slate-300 border border-slate-200">{{item.teamAdminName ? item.teamAdminName[0] : ''}}</div>
-                            <div class="font-bold text-md text-slate-900">{{item.teamAdminName}}</div>
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center -space-x-2">
-                        <div *ngFor="let item of [1,2,3]" class="rounded-full bg-slate-200 p-2 border-2 w-7 h-7 flex items-center justify-center border-white">
-                              <i class="fa fa-user text-slate-400 text-xs"></i>
-                        </div>
-                        <div *ngIf="item.totalCount > 3">{{item.totalCount - 3}}</div>
-                        </div>
-                        <div class="font-bold text-md text-primary-600 cursor-pointer" (click)="openMembers(item)">Manage Members</div>
-                    </div>
+      <div class="grid  lg:grid-cols-2 grid-cols-1 gap-6">
+        @for (item of teamsData; track item) {
+          <div class="rounded-[1rem] border border-slate-300 p-6 space-y-6 group hover:shadow-md shadow-slate-300">
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-4 items-center">
+                <div>
+                  <div class="text-violet-600 border border-slate-50 rounded-lg bg-slate-50 px-3 py-2">
+                    <i class="fa fa-users-gear text-xl"></i>
+                  </div>
                 </div>
-            </ng-container>
-        </div>
+                <div>
+                  <p class="font-bold text-lg text-slate-800">{{item.teamName}}</p>
+                  <p class="text-slate-500 font-bold text-sm">{{item.totalCount}} Members &nbsp; •  &nbsp;Active</p>
+                </div>
+              </div>
+              <button (click)="addOrEditTeam(item)"> <i class="fa fa-pencil text-slate-300 hover:text-primary-400 opacity-0 group-hover:opacity-100"></i></button>
+            </div>
+            <div class="flex items-center justify-between border-b pb-8">
+              <div class="font-bold text-xs text-slate-500 tracking-[1px] uppercase">Team Lead</div>
+              <div class="flex gap-1 items-center justify-center">
+                <div class="uppercase w-7 h-7 flex items-center justify-center rounded-full text-[10px] font-bold text-white bg-slate-300 border border-slate-200">{{item.teamAdminName ? item.teamAdminName[0] : ''}}</div>
+                <div class="font-bold text-md text-slate-900">{{item.teamAdminName}}</div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center -space-x-2">
+                @for (item of [1,2,3]; track item) {
+                  <div class="rounded-full bg-slate-200 p-2 border-2 w-7 h-7 flex items-center justify-center border-white">
+                    <i class="fa fa-user text-slate-400 text-xs"></i>
+                  </div>
+                }
+                @if (item.totalCount > 3) {
+                  <div>{{item.totalCount - 3}}</div>
+                }
+              </div>
+              <div class="font-bold text-md text-primary-600 cursor-pointer" (click)="openMembers(item)">Manage Members</div>
+            </div>
+          </div>
+        }
+      </div>
     </div>
-</div>
-<div *ngIf="isAdd">
-    <app-team-form (isSuccessChanged)="isChanged($event)" [data]="data"></app-team-form>
-</div>
-<div *ngIf="isMembers">
-    <app-team-members [_teamId]="teamId" (isPopupClosed)="popupClosed($event)"></app-team-members>
-</div>
+  </div>
+  @if (isAdd) {
+    <div>
+      <app-team-form (isSuccessChanged)="isChanged($event)" [data]="data"></app-team-form>
+    </div>
+  }
+  @if (isMembers) {
+    <div>
+      <app-team-members [_teamId]="teamId" (isPopupClosed)="popupClosed($event)"></app-team-members>
+    </div>
+  }

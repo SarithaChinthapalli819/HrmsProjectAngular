@@ -1,93 +1,99 @@
 <div class="fixed inset-0 backdrop-blur-lg flex items-center justify-center w-full h-full">
-    <div class="w-full max-w-2xl max-h-[90vh] border border-slate-200 rounded-[1rem] flex flex-col shadow-md">
-        <div class="flex items-center justify-between p-6">
-            <div class="font-bold text-lg text-slate-800 tracking-tighter">Generate Payroll</div>
-            <button (click)="onCancel(false)">
-                <i class="fa fa-times text-md text-slate-500"></i>
-            </button>
-        </div>
-        <form [formGroup]="projectForm" (ngSubmit)="upsertProject()" class="flex flex-col min-h-0">
-            <div class="flex flex-col space-y-4 border-y py-6 border-slate-100 flex-1 min-h-0 overflow-auto">
-                <div class="space-y-2 flex-1 px-6">
-                    <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Project name</label>
-                    <input class="form-input-pro" placeholder="e.g. Website Redesign" formControlName="projectName"/>
-                </div>
-                <div class="flex items-center justify-between gap-2 px-6">
-                    <div class="space-y-2 flex-1">
-                        <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Client name</label>
-                        <div class="relative">
-                            <i
-                                class="fa fa-building absolute left-4 right-2 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                            <input class="form-input-pro pl-9" placeholder="e.g. Website Redesign" formControlName="clientName"/>
-                        </div>
-
-                    </div>
-                    <div class="space-y-2 flex-1">
-                        <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">priority</label>
-                        <div class="relative">
-                            <i class="fa fa-signal absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 z-10"></i>
-                            <select class="form-input-pro pl-9" formControlName="priority">
-                                <option *ngFor="let item of priority" [value]="item.value">
-                                    {{item.name}}
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="space-y-2 flex-1 px-6">
-                    <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Description</label>
-                    <textarea class="form-input-pro" placeholder="Breif project description" formControlName="description"></textarea>
-                </div>
-                <div class="flex items-center justify-between gap-2 px-6">
-                    <div class="space-y-2 flex-1">
-                        <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Start Date</label>
-                        <div class="relative">
-                            <i class="fa fa-calendar-day absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                            <input type="date" class="form-input-pro pl-9" placeholder="e.g. Website Redesign" formControlName="startDate"/>
-                        </div>
-
-                    </div>
-                    <div class="space-y-2 flex-1">
-                        <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Budget</label>
-                        <div class="relative">
-                            <i class="fa fa-dollar-sign absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                            <input class="form-input-pro pl-9" formControlName="budget"/>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="flex items-center justify-between gap-2 px-6">
-                    <div class="space-y-2 flex-1">
-                        <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Assigned Team</label>
-                        <div class="relative">
-                            <i class="fa fa-users absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 z-10"></i>
-                            <select class="form-input-pro pl-9" formControlName="teamId">
-                                <option *ngFor="let item of teams" [value]="item.teamId">{{item.teamName}}</option>
-                            </select>
-                        </div>
-
-                    </div>
-                    <div class="space-y-2 flex-1">
-                        <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Status</label>
-                        <div class="relative">
-                            <i
-                                class="fa fa-info-circle absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 z-10"></i>
-                            <select class="form-input-pro pl-9" formControlName="status">
-                                 <option *ngFor="let item of status" [value]="item.value">
-                                    {{item.name}}
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="flex gap-2 p-6">
-                <button (click)="onCancel(false)" type="button"
-                    class="flex-1 font-bold  text-slate-400 border p-2 rounded-lg bg-slate-100 hover:bg-slate-200">Cancel</button>
-                <button type="submit"
-                    class="flex-[2] font-bold border p-2 rounded-lg bg-primary-500 hover:bg-primary-600 text-white shadow-md shadow-primary-200">Save
-                    Project</button>
-            </div>
-        </form>
+  <div class="w-full max-w-2xl max-h-[90vh] border border-slate-200 rounded-[1rem] flex flex-col shadow-md">
+    <div class="flex items-center justify-between p-6">
+      <div class="font-bold text-lg text-slate-800 tracking-tighter">Generate Payroll</div>
+      <button (click)="onCancel(false)">
+        <i class="fa fa-times text-md text-slate-500"></i>
+      </button>
     </div>
+    <form [formGroup]="projectForm" (ngSubmit)="upsertProject()" class="flex flex-col min-h-0">
+      <div class="flex flex-col space-y-4 border-y py-6 border-slate-100 flex-1 min-h-0 overflow-auto">
+        <div class="space-y-2 flex-1 px-6">
+          <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Project name</label>
+          <input class="form-input-pro" placeholder="e.g. Website Redesign" formControlName="projectName"/>
+        </div>
+        <div class="flex items-center justify-between gap-2 px-6">
+          <div class="space-y-2 flex-1">
+            <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Client name</label>
+            <div class="relative">
+              <i
+              class="fa fa-building absolute left-4 right-2 top-1/2 -translate-y-1/2 text-slate-400"></i>
+              <input class="form-input-pro pl-9" placeholder="e.g. Website Redesign" formControlName="clientName"/>
+            </div>
+
+          </div>
+          <div class="space-y-2 flex-1">
+            <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">priority</label>
+            <div class="relative">
+              <i class="fa fa-signal absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 z-10"></i>
+              <select class="form-input-pro pl-9" formControlName="priority">
+                @for (item of priority; track item) {
+                  <option [value]="item.value">
+                    {{item.name}}
+                  </option>
+                }
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-2 flex-1 px-6">
+          <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Description</label>
+          <textarea class="form-input-pro" placeholder="Breif project description" formControlName="description"></textarea>
+        </div>
+        <div class="flex items-center justify-between gap-2 px-6">
+          <div class="space-y-2 flex-1">
+            <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Start Date</label>
+            <div class="relative">
+              <i class="fa fa-calendar-day absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+              <input type="date" class="form-input-pro pl-9" placeholder="e.g. Website Redesign" formControlName="startDate"/>
+            </div>
+
+          </div>
+          <div class="space-y-2 flex-1">
+            <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Budget</label>
+            <div class="relative">
+              <i class="fa fa-dollar-sign absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+              <input class="form-input-pro pl-9" formControlName="budget"/>
+            </div>
+
+          </div>
+        </div>
+        <div class="flex items-center justify-between gap-2 px-6">
+          <div class="space-y-2 flex-1">
+            <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Assigned Team</label>
+            <div class="relative">
+              <i class="fa fa-users absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 z-10"></i>
+              <select class="form-input-pro pl-9" formControlName="teamId">
+                @for (item of teams; track item) {
+                  <option [value]="item.teamId">{{item.teamName}}</option>
+                }
+              </select>
+            </div>
+
+          </div>
+          <div class="space-y-2 flex-1">
+            <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Status</label>
+            <div class="relative">
+              <i
+              class="fa fa-info-circle absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 z-10"></i>
+              <select class="form-input-pro pl-9" formControlName="status">
+                @for (item of status; track item) {
+                  <option [value]="item.value">
+                    {{item.name}}
+                  </option>
+                }
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-2 p-6">
+        <button (click)="onCancel(false)" type="button"
+        class="flex-1 font-bold  text-slate-400 border p-2 rounded-lg bg-slate-100 hover:bg-slate-200">Cancel</button>
+        <button type="submit"
+          class="flex-[2] font-bold border p-2 rounded-lg bg-primary-500 hover:bg-primary-600 text-white shadow-md shadow-primary-200">Save
+        Project</button>
+      </div>
+    </form>
+  </div>
 </div>

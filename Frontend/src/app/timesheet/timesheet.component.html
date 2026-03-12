@@ -1,80 +1,90 @@
 <div class="flex flex-col w-full h-full overflow-hidden">
-    <div class="flex items-center justify-between p-6">
-        <div class="font-bold text-xl text-slate-800"> My Timesheets</div>
-        <div class="flex items-center justify-center gap-4" *ngIf="!isDetailsOpened">
-            <button (click)="changeMonth(-1)"
-                class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-300 bg-white shadow-sm hover:bg-slate-100 transition">
-                <i class="fa-solid fa-chevron-left text-slate-600"></i>
-            </button>
+  <div class="flex items-center justify-between p-6">
+    <div class="font-bold text-xl text-slate-800"> My Timesheets</div>
+    @if (!isDetailsOpened) {
+      <div class="flex items-center justify-center gap-4">
+        <button (click)="changeMonth(-1)"
+          class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-300 bg-white shadow-sm hover:bg-slate-100 transition">
+          <i class="fa-solid fa-chevron-left text-slate-600"></i>
+        </button>
             <div class="px-8 py-2 rounded-full border border-slate-300 bg-white shadow-sm 
               text-lg font-medium text-slate-700 min-w-[200px] text-center">
-                {{ selectedMonth | date:'MMMM yyyy' }}
-            </div>
-            <button (click)="changeMonth(1)"
-                class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-300 bg-white shadow-sm hover:bg-slate-100 transition">
-                <i class="fa-solid fa-chevron-right text-slate-600"></i>
-            </button>
+          {{ selectedMonth | date:'MMMM yyyy' }}
         </div>
+        <button (click)="changeMonth(1)"
+          class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-300 bg-white shadow-sm hover:bg-slate-100 transition">
+          <i class="fa-solid fa-chevron-right text-slate-600"></i>
+        </button>
+      </div>
+    }
+  </div>
+  @if (!isDetailsOpened) {
+    <div class="flex-1 min-h-0 p-6 overflow-auto">
+      <table class="w-full space-y-8 border border-slate-100 border-collapse">
+        <thead>
+          <tr
+            class="text-left uppercase text-slate-600 tracking-wider text-[12px] border border-slate-100  bg-slate-100">
+            <th class="py-6 pl-3 w-20">User name</th>
+            <th class="w-20">Payroll Period</th>
+            <th class="w-20">Hours</th>
+            <th class="w-20">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of timesheetData; track item) {
+            <tr class="font-bold text-base text-slate-700 border border-slate-100"
+              >
+              <td class="py-6 pl-3 font-bold text-sm text-slate-500">{{item.userName}}</td>
+              <td class="py-6 font-bold text-sm text-slate-500">{{item.monthStart | date:'dd-MMM-yyyy'}} -
+              {{item.monthEnd | date:'dd-MMM-yyyy'}}</td>
+              <td class="py-6 font-bold text-sm text-slate-500">{{ item.spentHours ? (item.spentHours + ' h') :
+              '-' }}</td>
+              <td class="py-6 font-bold text-sm text-slate-500">
+                <i class="fa-solid fa-up-right-from-square text-red-400 cursor-pointer"
+                (click)="isDetailsOpened = true"></i>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
     </div>
-    <div class="flex-1 min-h-0 p-6 overflow-auto" *ngIf="!isDetailsOpened">
-        <table class="w-full space-y-8 border border-slate-100 border-collapse">
+  }
+  @if (isDetailsOpened) {
+    <div class="p-6 flex flex-col min-h-0">
+      <div class="flex items-center gap-2"><i (click)="isDetailsOpened = false"
+      class="fa-solid fa-arrow-left text-primary-500 cursor-pointer"></i>
+      <div class="font-bold text-primary-600 text-xs">Back to timesheets</div>
+    </div>
+    <div class="flex-1 min-h-0 p-6 overflow-auto">
+      @for (data of timesheetDetailsData; track data) {
+        <div>
+          <div class="py-6 pl-3 font-extrabold text-sm text-primary-600">{{data.key | date:'dd-MMM-yyyy'}}</div>
+          <table class="w-full space-y-8 border border-slate-100 border-collapse">
             <thead>
-                <tr
-                    class="text-left uppercase text-slate-600 tracking-wider text-[12px] border border-slate-100  bg-slate-100">
-                    <th class="py-6 pl-3 w-20">User name</th>
-                    <th class="w-20">Payroll Period</th>
-                    <th class="w-20">Hours</th>
-                    <th class="w-20">Status</th>
-                </tr>
+              <tr
+                class="text-left uppercase text-slate-600 tracking-wider text-[12px] border border-slate-100  bg-slate-100">
+                <th class="py-6 pl-3 w-20">Project Name</th>
+                <th class="w-20">Task Name</th>
+                <th class="w-20">Start Time</th>
+                <th class="w-20">End Time</th>
+                <th class="w-20">Spent Hours</th>
+              </tr>
             </thead>
             <tbody>
-                <tr class="font-bold text-base text-slate-700 border border-slate-100"
-                    *ngFor="let item of timesheetData">
-                    <td class="py-6 pl-3 font-bold text-sm text-slate-500">{{item.userName}}</td>
-                    <td class="py-6 font-bold text-sm text-slate-500">{{item.monthStart | date:'dd-MMM-yyyy'}} -
-                        {{item.monthEnd | date:'dd-MMM-yyyy'}}</td>
-                    <td class="py-6 font-bold text-sm text-slate-500">{{ item.spentHours ? (item.spentHours + ' h') :
-                        '-' }}</td>
-                    <td class="py-6 font-bold text-sm text-slate-500">
-                        <i class="fa-solid fa-up-right-from-square text-red-400 cursor-pointer"
-                            (click)="isDetailsOpened = true"></i>
-                    </td>
+              @for (item of data.values; track item) {
+                <tr class="font-bold text-base text-slate-700 border border-slate-100">
+                  <td class="py-6 pl-3 font-bold text-sm text-slate-500"> {{item.projectName}}</td>
+                  <td class="py-6 font-bold text-sm text-slate-500"> {{item.taskName}}</td>
+                  <td class="py-6 font-bold text-sm text-slate-500"> {{item.startTime}}</td>
+                  <td class="py-6 font-bold text-sm text-slate-500"> {{item.endTime}}</td>
+                  <td class="py-6 font-bold text-sm text-slate-500">{{ item.spentHours ? (item.spentHours + ' h') :  '-' }}</td>
                 </tr>
+              }
             </tbody>
-        </table>
-    </div>
-    <div *ngIf="isDetailsOpened" class="p-6 flex flex-col min-h-0">
-        <div class="flex items-center gap-2"><i (click)="isDetailsOpened = false"
-                class="fa-solid fa-arrow-left text-primary-500 cursor-pointer"></i>
-            <div class="font-bold text-primary-600 text-xs">Back to timesheets</div>
+          </table>
         </div>
-        <div class="flex-1 min-h-0 p-6 overflow-auto">
-            <div *ngFor="let data of timesheetDetailsData">
-                <div class="py-6 pl-3 font-extrabold text-sm text-primary-600">{{data.key | date:'dd-MMM-yyyy'}}</div>
-                    <table class="w-full space-y-8 border border-slate-100 border-collapse">
-                        <thead>
-                            <tr
-                                class="text-left uppercase text-slate-600 tracking-wider text-[12px] border border-slate-100  bg-slate-100">
-                                <th class="py-6 pl-3 w-20">Project Name</th>
-                                <th class="w-20">Task Name</th>
-                                <th class="w-20">Start Time</th>
-                                <th class="w-20">End Time</th>
-                                <th class="w-20">Spent Hours</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="font-bold text-base text-slate-700 border border-slate-100" *ngFor="let item of data.values">
-                                <td class="py-6 pl-3 font-bold text-sm text-slate-500"> {{item.projectName}}</td>
-                                <td class="py-6 font-bold text-sm text-slate-500"> {{item.taskName}}</td>
-                                <td class="py-6 font-bold text-sm text-slate-500"> {{item.startTime}}</td>
-                                <td class="py-6 font-bold text-sm text-slate-500"> {{item.endTime}}</td>
-                                <td class="py-6 font-bold text-sm text-slate-500">{{ item.spentHours ? (item.spentHours + ' h') :  '-' }}</td>
-
-                            </tr>
-                        </tbody>
-                    </table>
-            </div>
-
-        </div>
+      }
     </div>
+  </div>
+}
 </div>

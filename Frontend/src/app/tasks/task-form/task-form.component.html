@@ -1,68 +1,74 @@
 <div class="fixed inset-0 backdrop-blur-lg w-full h-full flex flex-col items-center justify-center">
-    <div class="flex flex-col w-full max-w-xl max-h-[90vh] bg-white border border-slate-300 rounded-lg">
-        <div class="p-6 flex items-center justify-between pb-0">
-            <div class="flex flex-col gap-1">
-                <div class="font-bold text-xl text-slate-800">New Task</div>
-                <div class="font-bold text-sm text-slate-400">Assignment Details</div>
-            </div>
-            <button (click)="closeForm(false)">
-                <i class="fa fa-times text-md text-slate-500"></i>
-            </button>
-        </div>
-        <form [formGroup]="tasksForm" (ngSubmit)="upsertTask()" class="flex flex-col flex-1 min-h-0">
-            <div class="flex flex-col overflow-auto min-h-0 space-y-4 p-6">
-                <div class="space-y-2">
-                    <label class="font-bold text-xs text-slate-500 tracking-wider uppercase">Project</label>
-                    <select class="form-input-pro" formControlName="projectId">
-                        <option *ngFor="let item of projects" [value]="item.projectId">{{item.projectName}}</option>
-                    </select>
-                </div>
-                <div class="space-y-2">
-                    <label class="font-bold text-xs text-slate-500 tracking-wider uppercase">Task Title</label>
-                    <input class="form-input-pro placeholder:font-bold placeholder:text-slate-300"
-                        formControlName="taskName" placeholder="e.g. Design logo page" />
-                </div>
-                <div class="space-y-2">
-                    <label class="font-bold text-xs text-slate-500 tracking-wider uppercase">Description</label>
-                    <textarea class="form-input-pro placeholder:font-bold placeholder:text-slate-300"
-                        formControlName="description" placeholder="Add details ..."></textarea>
-                </div>
-                <div class="flex items-center gap-2">
-                    <div class="space-y-2 flex-1">
-                        <label class="font-bold text-xs text-slate-500 uppercase tracking-wide">Priority</label>
-                        <div class="relative">
-                            <i class="fa fa-signal absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 z-10"></i>
-                            <select class="form-input-pro pl-9" formControlName="priority">
-                                <option *ngFor="let item of priority" [value]="item.value">
-                                    {{item.name}}
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="space-y-2 flex-1">
-                        <label class="font-bold text-xs text-slate-500 tracking-wider uppercase">DUE DATE</label>
-                        <input type="date" class="form-input-pro placeholder:font-bold placeholder:text-slate-300"
-                            formControlName="dueDate" />
-                    </div>
-                </div>
-                <div class="space-y-2 flex-1">
-                    <label class="font-bold text-xs text-slate-500 uppercase tracking-wide">Assigned To</label>
-                    <div class="relative"> 
-                        <i class="fa fa-users-gear absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 z-10"></i>
-                        <select class="form-input-pro pl-9" formControlName="assignedTo">
-                            <option *ngFor="let item of teamMembers" [value]="item.teamMemberId">
-                                {{item.teamMemberName}}
-                            </option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="p-6 flex items-center border-t gap-2">
-                <button type="button" class="rounded-lg border flex-1 p-3 bg-slate-50 text-slate-900 hover:bg-slate-100"
-                    (click)="closeForm(false)">Cancel</button>
-                <button class="rounded-lg border flex-[2] p-3 bg-primary-600 text-white hover:bg-primary-700"
-                    [disabled]="tasksForm.invalid">Create Task</button>
-            </div>
-        </form>
+  <div class="flex flex-col w-full max-w-xl max-h-[90vh] bg-white border border-slate-300 rounded-lg">
+    <div class="p-6 flex items-center justify-between pb-0">
+      <div class="flex flex-col gap-1">
+        <div class="font-bold text-xl text-slate-800">New Task</div>
+        <div class="font-bold text-sm text-slate-400">Assignment Details</div>
+      </div>
+      <button (click)="closeForm(false)">
+        <i class="fa fa-times text-md text-slate-500"></i>
+      </button>
     </div>
-</div>
+    <form [formGroup]="tasksForm" (ngSubmit)="upsertTask()" class="flex flex-col flex-1 min-h-0">
+      <div class="flex flex-col overflow-auto min-h-0 space-y-4 p-6">
+        <div class="space-y-2">
+          <label class="font-bold text-xs text-slate-500 tracking-wider uppercase">Project</label>
+          <select class="form-input-pro" formControlName="projectId">
+            @for (item of projects; track item) {
+              <option [value]="item.projectId">{{item.projectName}}</option>
+            }
+          </select>
+        </div>
+        <div class="space-y-2">
+          <label class="font-bold text-xs text-slate-500 tracking-wider uppercase">Task Title</label>
+          <input class="form-input-pro placeholder:font-bold placeholder:text-slate-300"
+            formControlName="taskName" placeholder="e.g. Design logo page" />
+          </div>
+          <div class="space-y-2">
+            <label class="font-bold text-xs text-slate-500 tracking-wider uppercase">Description</label>
+            <textarea class="form-input-pro placeholder:font-bold placeholder:text-slate-300"
+            formControlName="description" placeholder="Add details ..."></textarea>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="space-y-2 flex-1">
+              <label class="font-bold text-xs text-slate-500 uppercase tracking-wide">Priority</label>
+              <div class="relative">
+                <i class="fa fa-signal absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 z-10"></i>
+                <select class="form-input-pro pl-9" formControlName="priority">
+                  @for (item of priority; track item) {
+                    <option [value]="item.value">
+                      {{item.name}}
+                    </option>
+                  }
+                </select>
+              </div>
+            </div>
+            <div class="space-y-2 flex-1">
+              <label class="font-bold text-xs text-slate-500 tracking-wider uppercase">DUE DATE</label>
+              <input type="date" class="form-input-pro placeholder:font-bold placeholder:text-slate-300"
+                formControlName="dueDate" />
+              </div>
+            </div>
+            <div class="space-y-2 flex-1">
+              <label class="font-bold text-xs text-slate-500 uppercase tracking-wide">Assigned To</label>
+              <div class="relative">
+                <i class="fa fa-users-gear absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 z-10"></i>
+                <select class="form-input-pro pl-9" formControlName="assignedTo">
+                  @for (item of teamMembers; track item) {
+                    <option [value]="item.teamMemberId">
+                      {{item.teamMemberName}}
+                    </option>
+                  }
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 flex items-center border-t gap-2">
+            <button type="button" class="rounded-lg border flex-1 p-3 bg-slate-50 text-slate-900 hover:bg-slate-100"
+            (click)="closeForm(false)">Cancel</button>
+            <button class="rounded-lg border flex-[2] p-3 bg-primary-600 text-white hover:bg-primary-700"
+            [disabled]="tasksForm.invalid">Create Task</button>
+          </div>
+        </form>
+      </div>
+    </div>

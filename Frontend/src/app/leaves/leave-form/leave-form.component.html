@@ -1,70 +1,74 @@
 <div class="w-full h-full inset-0 backdrop-blur-md fixed flex items-center justify-center">
-    <div
-        class="bg-white rounded-[2rem] border border-slate-100 w-full max-w-2xl max-h-[90vh] flex flex-col space-y-2 shadow-lg shadow-slate-200">
-        <div class="flex items-center justify-between p-6">
-            <div>
-                <div class="font-bold text-xl text-slate-800">Request Time Off</div>
-                <div class="font-bold text-sm text-slate-500">Submit New Application</div>
-            </div>
-            <button (click)="closeForm(false)">
-                <i class="fa fa-times text-xl text-slate-500"></i>
-            </button>
-        </div>
-        <form [formGroup]="leavesForm" class="flex flex-col overflow-hidden" (ngSubmit)="upsertLeave()">
-            <div class="flex-1 overflow-auto border-b border-t border-slate-200">
-                <div class="p-6 flex items-center gap-2">
-                    <div class="space-y-2 flex-1">
-                        <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Leave Category</label>
-                        <select class="form-input-pro" formControlName="leaveTypeId">
-                            <option *ngFor="let item of leaveTypes" [value]="item.leaveTypeId">{{item.leaveTypeName}}({{item.remaining}})
-                            </option>
-                        </select>
-                    </div>
-                    <div class="space-y-2 flex-1">
-                        <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Users</label>
-                        <select class="form-input-pro" formControlName="userId">
-                            <option [value]="null">Select an employee ..</option>
-                            <option *ngFor="let item of userDetails" [value]="item.userId">
-                                {{item.userName}}
-                            </option>
-                        </select>
-                    </div>
-                </div>
-                <div class="p-6 flex items-center gap-3">
-                    <div class="space-y-2 flex-1">
-                        <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Date from</label>
-                        <div class="relative">
-                            <input type="date" class="form-input-pro pl-10" formControlName="dateFrom" />
-                            <i class="fa fa-calendar-alt absolute left-4 top-4 text-slate-300 text-sm"></i>
-                        </div>
-                    </div>
-                    <div class="space-y-2 flex-1">
-                        <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Date to</label>
-                        <div class="relative">
-                            <input type="date" class="form-input-pro pl-10" formControlName="dateTo" />
-                            <i class="fa fa-calendar-alt absolute left-4 top-4 text-slate-300 text-sm"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <div class="space-y-2">
-                        <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Reason For Leave</label>
-                        <div class="relative">
-                            <textarea class="form-input-pro pl-10" formControlName="reason"
-                                placeholder="Briefly explain your request..."></textarea>
-                            <i class="fa fa-comment-dots absolute left-4 top-4 text-slate-300 text-sm"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="flex gap-2 p-6">
-                <button (click)="closeForm(true)" type="button"
-                    class="flex-1 font-bold  text-slate-400 border p-2 rounded-lg bg-slate-100 hover:bg-slate-200">Cancel</button>
-                <button type="submit"
-                    class="flex-[2] font-bold border p-2 rounded-lg bg-primary-500 hover:bg-primary-600 text-white shadow-md shadow-primary-200">Submit
-                    Application</button>
-            </div>
-        </form>
-
+  <div
+    class="bg-white rounded-[2rem] border border-slate-100 w-full max-w-2xl max-h-[90vh] flex flex-col space-y-2 shadow-lg shadow-slate-200">
+    <div class="flex items-center justify-between p-6">
+      <div>
+        <div class="font-bold text-xl text-slate-800">Request Time Off</div>
+        <div class="font-bold text-sm text-slate-500">Submit New Application</div>
+      </div>
+      <button (click)="closeForm(false)">
+        <i class="fa fa-times text-xl text-slate-500"></i>
+      </button>
     </div>
+    <form [formGroup]="leavesForm" class="flex flex-col overflow-hidden" (ngSubmit)="upsertLeave()">
+      <div class="flex-1 overflow-auto border-b border-t border-slate-200">
+        <div class="p-6 flex items-center gap-2">
+          <div class="space-y-2 flex-1">
+            <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Leave Category</label>
+            <select class="form-input-pro" formControlName="leaveTypeId">
+              @for (item of leaveTypes; track item) {
+                <option [value]="item.leaveTypeId">{{item.leaveTypeName}}({{item.remaining}})
+                </option>
+              }
+            </select>
+          </div>
+          <div class="space-y-2 flex-1">
+            <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Users</label>
+            <select class="form-input-pro" formControlName="userId">
+              <option [value]="null">Select an employee ..</option>
+              @for (item of userDetails; track item) {
+                <option [value]="item.userId">
+                  {{item.userName}}
+                </option>
+              }
+            </select>
+          </div>
+        </div>
+        <div class="p-6 flex items-center gap-3">
+          <div class="space-y-2 flex-1">
+            <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Date from</label>
+            <div class="relative">
+              <input type="date" class="form-input-pro pl-10" formControlName="dateFrom" />
+              <i class="fa fa-calendar-alt absolute left-4 top-4 text-slate-300 text-sm"></i>
+            </div>
+          </div>
+          <div class="space-y-2 flex-1">
+            <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Date to</label>
+            <div class="relative">
+              <input type="date" class="form-input-pro pl-10" formControlName="dateTo" />
+              <i class="fa fa-calendar-alt absolute left-4 top-4 text-slate-300 text-sm"></i>
+            </div>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="space-y-2">
+            <label class="font-bold text-sm text-slate-500 uppercase tracking-wide">Reason For Leave</label>
+            <div class="relative">
+              <textarea class="form-input-pro pl-10" formControlName="reason"
+              placeholder="Briefly explain your request..."></textarea>
+              <i class="fa fa-comment-dots absolute left-4 top-4 text-slate-300 text-sm"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-2 p-6">
+        <button (click)="closeForm(true)" type="button"
+        class="flex-1 font-bold  text-slate-400 border p-2 rounded-lg bg-slate-100 hover:bg-slate-200">Cancel</button>
+        <button type="submit"
+          class="flex-[2] font-bold border p-2 rounded-lg bg-primary-500 hover:bg-primary-600 text-white shadow-md shadow-primary-200">Submit
+        Application</button>
+      </div>
+    </form>
+
+  </div>
 </div>

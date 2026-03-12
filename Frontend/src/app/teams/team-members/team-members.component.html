@@ -1,49 +1,53 @@
 <div class="w-full h-full backdrop-blur-lg fixed inset-0 flex items-center justify-center">
-    <div
-        class="w-full max-w-2xl max-h-[90vh] rounded-[2rem] border border-slate-200 shadow-md bg-white space-y-6 flex flex-col">
-        <div class="p-6 flex items-center justify-between border-b">
-            <div>
-                <div class="font-bold text-xl text-slate-900">Manage Team Members</div>
-                <div class="font-bold text-sm text-slate-500">Add or remove members for {{teamName}}</div>
-            </div>
-            <button (click)="popupClosed(false)" type="button">
-                <i class="fa fa-times text-xl text-slate-500"></i>
-            </button>
-        </div>
-        <div class="flex-1 overflow-auto">
-            <div class="p-6 border border-slate-200 rounded-md m-4">
-                <div class="font-bold text-slate-900 text-md">Add New Member</div>
-                <div class="flex items-center gap-2">
-                    <select class="form-input-pro flex-[2]" [(ngModel)]="userId">
-                        <option [value]="null">Select an employee ..</option>
-                        <option *ngFor="let item of userDetails" [value]="item.userId">
-                            {{item.userName}}
-                        </option>
-                    </select>
-                    <button  type="button" class="btn-primary-pro flex-1" (click)="isAdd = true;upsertTeammembers()">Add</button>
-                </div>
-            </div>
-            <div class="px-6">
-                <div class="font-bold text-slate-900 text-md">Current Members ({{membersCount}})</div>
-                <div class="space-y-4">
-                    <div *ngFor="let item of teamMembers" class="rounded-[0.5rem] border border-slate-200 bg-white p-4">
-                    <div class="group flex items-center justify-between">
-                        <div class="flex space-x-4 items-center">
-                        <div class="w-8 h-8 text-indigo-400 bg-indigo-100 flex items-center justify-center font-bold text-sm rounded-full p-3">{{item.teamMemberName[0]}}</div>
-                        <div class="spacey-1">
-                             <div class="font-bold text-lg text-slate-800">{{item.teamMemberName}}</div>
-                             <div class="font-bold text-sm text-slate-500">{{item.email}}</div>
-                        </div>
-                    </div>
-                    <button type="button" class="opacity-0 group-hover:opacity-100" (click)="deleteMember = true;userId=item.teamMemberId;upsertTeammembers()"> <i class="fa fa-trash text-slate-400 hover:text-primary-500"></i></button>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-        <div class="p-6 border-t border-slate-200 flex items-center justify-end">
-            <button type="button"
-                class="font-bold text-md text-slate-800 bg-slate-50 border border-slate-200 hover:bg-slate-200 px-6 py-2 rounded-md" (click)="popupClosed(false)">Close</button>
-        </div>
+  <div
+    class="w-full max-w-2xl max-h-[90vh] rounded-[2rem] border border-slate-200 shadow-md bg-white space-y-6 flex flex-col">
+    <div class="p-6 flex items-center justify-between border-b">
+      <div>
+        <div class="font-bold text-xl text-slate-900">Manage Team Members</div>
+        <div class="font-bold text-sm text-slate-500">Add or remove members for {{teamName}}</div>
+      </div>
+      <button (click)="popupClosed(false)" type="button">
+        <i class="fa fa-times text-xl text-slate-500"></i>
+      </button>
     </div>
+    <div class="flex-1 overflow-auto">
+      <div class="p-6 border border-slate-200 rounded-md m-4">
+        <div class="font-bold text-slate-900 text-md">Add New Member</div>
+        <div class="flex items-center gap-2">
+          <select class="form-input-pro flex-[2]" [(ngModel)]="userId">
+            <option [value]="null">Select an employee ..</option>
+            @for (item of userDetails; track item) {
+              <option [value]="item.userId">
+                {{item.userName}}
+              </option>
+            }
+          </select>
+          <button  type="button" class="btn-primary-pro flex-1" (click)="isAdd = true;upsertTeammembers()">Add</button>
+        </div>
+      </div>
+      <div class="px-6">
+        <div class="font-bold text-slate-900 text-md">Current Members ({{membersCount}})</div>
+        <div class="space-y-4">
+          @for (item of teamMembers; track item) {
+            <div class="rounded-[0.5rem] border border-slate-200 bg-white p-4">
+              <div class="group flex items-center justify-between">
+                <div class="flex space-x-4 items-center">
+                  <div class="w-8 h-8 text-indigo-400 bg-indigo-100 flex items-center justify-center font-bold text-sm rounded-full p-3">{{item.teamMemberName[0]}}</div>
+                  <div class="spacey-1">
+                    <div class="font-bold text-lg text-slate-800">{{item.teamMemberName}}</div>
+                    <div class="font-bold text-sm text-slate-500">{{item.email}}</div>
+                  </div>
+                </div>
+                <button type="button" class="opacity-0 group-hover:opacity-100" (click)="deleteMember = true;userId=item.teamMemberId;upsertTeammembers()"> <i class="fa fa-trash text-slate-400 hover:text-primary-500"></i></button>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+    <div class="p-6 border-t border-slate-200 flex items-center justify-end">
+      <button type="button"
+      class="font-bold text-md text-slate-800 bg-slate-50 border border-slate-200 hover:bg-slate-200 px-6 py-2 rounded-md" (click)="popupClosed(false)">Close</button>
+    </div>
+  </div>
 </div>

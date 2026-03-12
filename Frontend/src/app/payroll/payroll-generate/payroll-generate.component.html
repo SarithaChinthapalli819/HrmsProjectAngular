@@ -1,91 +1,97 @@
 <div class="fixed inset-0 backdrop-blur-md flex items-center justify-center">
-    <div class="rounded-[2rem] w-full max-w-2xl max-h-[80vh] flex flex-col bg-white border border-slate-300">
-        <div class="flex items-center justify-between p-6">
-            <div class="font-bold text-lg text-slate-800 tracking-tighter">Generate Payroll</div>
-            <button (click)="onCancel(false)">
-                <i class="fa fa-times text-md text-slate-500"></i>
-            </button>
-        </div>
-        <form [formGroup]="payrollForm" (ngSubmit)="upsertPayroll()" class="flex flex-col min-h-0">
-            <div class="flex items-center gap-2 px-6 py-3 border-t">
-                <div class="flex flex-col space-y-1 flex-1">
-                    <div class="font-bold text-sm text-slate-600">Month</div>
-                    <select class="form-input-pro p-2" formControlName="month">
-                        <option [value]="1">January</option>
-                        <option [value]="2">February</option>
-                        <option [value]="3">March</option>
-                        <option [value]="4">April</option>
-                        <option [value]="5">May</option>
-                        <option [value]="6">June</option>
-                        <option [value]="7">July</option>
-                        <option [value]="8">August</option>
-                        <option [value]="9">September</option>
-                        <option [value]="10">October</option>
-                        <option [value]="11">November</option>
-                        <option [value]="12">December</option>
-                    </select>
-                </div>
-                <div class="flex flex-col space-y-1 flex-1">
-                    <div class="font-bold text-sm text-slate-600">Year</div>
-                    <input class="form-input-pro p-2" type="number" formControlName="year" />
-                </div>
-            </div>
-            <div class="flex items-center justify-between px-6 py-1 font-bold text-sm text-slate-600">
-                <div>Select Employees</div>
-                <div class="text-primary-500 cursor-pointer" (click)="isSelectedAllClicked()">Select all</div>
-            </div>
-            <div class="px-6 py-3 flex flex-col min-h-0 border-b">
-                <div class="rounded-md border border-slate-200 flex-1 overflow-auto" formArrayName="userDetails">
-                    <div *ngFor="let item of UserDetails?.controls;let i=index" [formGroupName]="i"
-                        class="border-b border-slate-200 p-3 space-y-2">
-                        <div>
-                            <div class="flex items-center justify-between gap-2">
-                                <div class="flex items-center justify-between gap-2">
-                                    <input type="checkbox" formControlName="isSelected" />
-                                    <div class="flex flex-col">
-                                        <div class="font-bold text-slate-700 text-md">{{ item.get('userName').value }}
-                                        </div>
-                                        <div class="text-amber-600 text-sm"><i class="fa fa-triangle-exclamation"></i>
-                                            No
-                                            default salary</div>
-                                    </div>
-                                </div>
-                                <div *ngIf="item.get('isSelected').value" class="font-bold text-primary-400 text-xs cursor-pointer" (click)="isItemClicked(i)">
-                                    <i class="fa fa-caret-down"></i>
-                                    Edit Salary
-                                </div>
-                            </div>
-                            <div *ngIf="item.get('isSelected').value" class="mt-2">
-                                <div class="flex gap-2">
-                                    <div class="flex flex-col gap-2">
-                                        <label class="font-bold text-xs text-slate-500">Basic Salary</label>
-                                        <input type="number" class="form-input-pro p-2" formControlName="basicSalary" (blur)="onChange(item)"/>
-                                    </div>
-                                    <div class="flex flex-col gap-2">
-                                        <label class="font-bold text-xs text-slate-500">Allowances</label>
-                                        <input type="number" class="form-input-pro p-2" formControlName="allowance" (blur)="onChange(item)"/>
-                                    </div>
-                                    <div class="flex flex-col gap-2">
-                                        <label class="font-bold text-xs text-slate-500">Deduction</label>
-                                        <input type="number" class="form-input-pro p-2" formControlName="deduction" (blur)="onChange(item)"/>
-                                    </div>
-                                </div>
-                                <div class="mt-2">
-                                    <div class="p-3 border rounded-md border-slate-200 text-sm text-slate-400">Net
-                                        Salary:<span class="text-green-600">${{item.get('netSalary').value}}</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="px-6 py-3 flex items-center justify-end gap-2">
-                <button (click)="onCancel(false)" type="button"
-                    class="rounded-md p-3 border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-400">Cancel</button>
-                <button type="submit"
-                    class="rounded-md p-3 border border-primary-200 bg-primary-500 hover:bg-primary-600 text-white">Generate
-                    payroll</button>
-            </div>
-        </form>
+  <div class="rounded-[2rem] w-full max-w-2xl max-h-[80vh] flex flex-col bg-white border border-slate-300">
+    <div class="flex items-center justify-between p-6">
+      <div class="font-bold text-lg text-slate-800 tracking-tighter">Generate Payroll</div>
+      <button (click)="onCancel(false)">
+        <i class="fa fa-times text-md text-slate-500"></i>
+      </button>
     </div>
+    <form [formGroup]="payrollForm" (ngSubmit)="upsertPayroll()" class="flex flex-col min-h-0">
+      <div class="flex items-center gap-2 px-6 py-3 border-t">
+        <div class="flex flex-col space-y-1 flex-1">
+          <div class="font-bold text-sm text-slate-600">Month</div>
+          <select class="form-input-pro p-2" formControlName="month">
+            <option [value]="1">January</option>
+            <option [value]="2">February</option>
+            <option [value]="3">March</option>
+            <option [value]="4">April</option>
+            <option [value]="5">May</option>
+            <option [value]="6">June</option>
+            <option [value]="7">July</option>
+            <option [value]="8">August</option>
+            <option [value]="9">September</option>
+            <option [value]="10">October</option>
+            <option [value]="11">November</option>
+            <option [value]="12">December</option>
+          </select>
+        </div>
+        <div class="flex flex-col space-y-1 flex-1">
+          <div class="font-bold text-sm text-slate-600">Year</div>
+          <input class="form-input-pro p-2" type="number" formControlName="year" />
+        </div>
+      </div>
+      <div class="flex items-center justify-between px-6 py-1 font-bold text-sm text-slate-600">
+        <div>Select Employees</div>
+        <div class="text-primary-500 cursor-pointer" (click)="isSelectedAllClicked()">Select all</div>
+      </div>
+      <div class="px-6 py-3 flex flex-col min-h-0 border-b">
+        <div class="rounded-md border border-slate-200 flex-1 overflow-auto" formArrayName="userDetails">
+          @for (item of UserDetails?.controls; track item; let i = $index) {
+            <div [formGroupName]="i"
+              class="border-b border-slate-200 p-3 space-y-2">
+              <div>
+                <div class="flex items-center justify-between gap-2">
+                  <div class="flex items-center justify-between gap-2">
+                    <input type="checkbox" formControlName="isSelected" />
+                    <div class="flex flex-col">
+                      <div class="font-bold text-slate-700 text-md">{{ item.get('userName').value }}
+                      </div>
+                      <div class="text-amber-600 text-sm"><i class="fa fa-triangle-exclamation"></i>
+                      No
+                    default salary</div>
+                  </div>
+                </div>
+                @if (item.get('isSelected').value) {
+                  <div class="font-bold text-primary-400 text-xs cursor-pointer" (click)="isItemClicked(i)">
+                    <i class="fa fa-caret-down"></i>
+                    Edit Salary
+                  </div>
+                }
+              </div>
+              @if (item.get('isSelected').value) {
+                <div class="mt-2">
+                  <div class="flex gap-2">
+                    <div class="flex flex-col gap-2">
+                      <label class="font-bold text-xs text-slate-500">Basic Salary</label>
+                      <input type="number" class="form-input-pro p-2" formControlName="basicSalary" (blur)="onChange(item)"/>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <label class="font-bold text-xs text-slate-500">Allowances</label>
+                      <input type="number" class="form-input-pro p-2" formControlName="allowance" (blur)="onChange(item)"/>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <label class="font-bold text-xs text-slate-500">Deduction</label>
+                      <input type="number" class="form-input-pro p-2" formControlName="deduction" (blur)="onChange(item)"/>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <div class="p-3 border rounded-md border-slate-200 text-sm text-slate-400">Net
+                      Salary:<span class="text-green-600">${{item.get('netSalary').value}}</span></div>
+                    </div>
+                  </div>
+                }
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+      <div class="px-6 py-3 flex items-center justify-end gap-2">
+        <button (click)="onCancel(false)" type="button"
+        class="rounded-md p-3 border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-400">Cancel</button>
+        <button type="submit"
+          class="rounded-md p-3 border border-primary-200 bg-primary-500 hover:bg-primary-600 text-white">Generate
+        payroll</button>
+      </div>
+    </form>
+  </div>
 </div>
