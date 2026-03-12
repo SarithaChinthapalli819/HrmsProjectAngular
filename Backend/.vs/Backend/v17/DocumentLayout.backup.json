@@ -1,0 +1,763 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Practiceprojects\\HRMSPRO\\Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\models\\timesheetmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\models\\timesheetmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetTimesheetDetailsData.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|solutionrelative:Database\\StoredProcedures\\GetTimesheetDetailsData.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\constants\\routeconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\constants\\routeconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetTimesheetData.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|solutionrelative:Database\\StoredProcedures\\GetTimesheetData.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\constants\\storedprocedurecontants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\constants\\storedprocedurecontants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetAttendanceData.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|solutionrelative:Database\\StoredProcedures\\GetAttendanceData.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\UpsertTasks.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|solutionrelative:Database\\StoredProcedures\\UpsertTasks.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\repositories\\teamsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\repositories\\teamsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\repositories\\leavesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\repositories\\leavesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\UpsertProject.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|solutionrelative:Database\\StoredProcedures\\UpsertProject.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetProject.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|solutionrelative:Database\\StoredProcedures\\GetProject.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetUserDetails.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|solutionrelative:Database\\StoredProcedures\\GetUserDetails.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\UpsertPayroll.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|solutionrelative:Database\\StoredProcedures\\UpsertPayroll.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetLeaves.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|solutionrelative:Database\\StoredProcedures\\GetLeaves.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\models\\leavetypesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\models\\leavetypesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\controllers\\teamscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\controllers\\teamscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetDepartments.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|solutionrelative:Database\\StoredProcedures\\GetDepartments.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetDesignations.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{B4FD8997-25D6-43B3-B249-3D690FF3B943}|Database\\Database.sqlproj|solutionrelative:Database\\StoredProcedures\\GetDesignations.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\controllers\\leavescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\controllers\\leavescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\services\\leavesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\services\\leavesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\models\\leavesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\models\\leavesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\repositories\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\repositories\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\models\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\models\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\repositories\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\repositories\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\services\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\services\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\repositories\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\repositories\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\repositories\\payrollrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\repositories\\payrollrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\models\\projectmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\models\\projectmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\services\\iprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\services\\iprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\repositories\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\repositories\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\controllers\\timesheetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\controllers\\timesheetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\repositories\\timesheetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\repositories\\timesheetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\repositories\\itimesheetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\repositories\\itimesheetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\services\\itimesheetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\services\\itimesheetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|c:\\practiceprojects\\hrmspro\\backend\\api\\services\\timesheetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37EB1D08-F45D-4938-9235-034297E29096}|Api\\Api.csproj|solutionrelative:api\\services\\timesheetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RouteConstants.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Constants\\RouteConstants.cs",
+              "RelativeDocumentMoniker": "Api\\Constants\\RouteConstants.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Constants\\RouteConstants.cs",
+              "RelativeToolTip": "Api\\Constants\\RouteConstants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T14:57:31.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StoredProcedureContants.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Constants\\StoredProcedureContants.cs",
+              "RelativeDocumentMoniker": "Api\\Constants\\StoredProcedureContants.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Constants\\StoredProcedureContants.cs",
+              "RelativeToolTip": "Api\\Constants\\StoredProcedureContants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T14:34:10.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetTimesheetDetailsData.sql",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetTimesheetDetailsData.sql",
+              "RelativeDocumentMoniker": "Database\\StoredProcedures\\GetTimesheetDetailsData.sql",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetTimesheetDetailsData.sql\r\n(localdb)\\ProjectModels.Database_4\r\n(SARITHA_123\\chint)",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-03-04T01:01:54.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TimesheetModel.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Models\\TimesheetModel.cs",
+              "RelativeDocumentMoniker": "Api\\Models\\TimesheetModel.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Models\\TimesheetModel.cs",
+              "RelativeToolTip": "Api\\Models\\TimesheetModel.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T17:59:07.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "TimesheetController.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Controllers\\TimesheetController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\TimesheetController.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Controllers\\TimesheetController.cs",
+              "RelativeToolTip": "Api\\Controllers\\TimesheetController.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAmwEQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T17:58:59.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "TimesheetRepository.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\TimesheetRepository.cs",
+              "RelativeDocumentMoniker": "Api\\Repositories\\TimesheetRepository.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\TimesheetRepository.cs",
+              "RelativeToolTip": "Api\\Repositories\\TimesheetRepository.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T18:00:08.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ITimesheetRepository.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\ITimesheetRepository.cs",
+              "RelativeDocumentMoniker": "Api\\Repositories\\ITimesheetRepository.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\ITimesheetRepository.cs",
+              "RelativeToolTip": "Api\\Repositories\\ITimesheetRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T01:21:22.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "ITimesheetService.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Services\\ITimesheetService.cs",
+              "RelativeDocumentMoniker": "Api\\Services\\ITimesheetService.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Services\\ITimesheetService.cs",
+              "RelativeToolTip": "Api\\Services\\ITimesheetService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAACAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T01:21:38.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "TimesheetService.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Services\\TimesheetService.cs",
+              "RelativeDocumentMoniker": "Api\\Services\\TimesheetService.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Services\\TimesheetService.cs",
+              "RelativeToolTip": "Api\\Services\\TimesheetService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T01:21:50.828Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetTimesheetData.sql",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetTimesheetData.sql",
+              "RelativeDocumentMoniker": "Database\\StoredProcedures\\GetTimesheetData.sql",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetTimesheetData.sql\r\n(localdb)\\ProjectModels.Database_4\r\n(SARITHA_123\\chint)",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-03-03T16:57:11.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GetAttendanceData.sql",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetAttendanceData.sql",
+              "RelativeDocumentMoniker": "Database\\StoredProcedures\\GetAttendanceData.sql",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetAttendanceData.sql\r\n(localdb)\\ProjectModels.Database_4\r\n(SARITHA_123\\chint)",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-03-04T01:09:16.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ITaskRepository.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\ITaskRepository.cs",
+              "RelativeDocumentMoniker": "Api\\Repositories\\ITaskRepository.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\ITaskRepository.cs",
+              "RelativeToolTip": "Api\\Repositories\\ITaskRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T16:17:19.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "TaskService.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Services\\TaskService.cs",
+              "RelativeDocumentMoniker": "Api\\Services\\TaskService.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Services\\TaskService.cs",
+              "RelativeToolTip": "Api\\Services\\TaskService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T15:50:22.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Controllers\\ProjectController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\ProjectController.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Controllers\\ProjectController.cs",
+              "RelativeToolTip": "Api\\Controllers\\ProjectController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAiwFAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T15:32:55.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Program.cs",
+              "RelativeDocumentMoniker": "Api\\Program.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Program.cs",
+              "RelativeToolTip": "Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T04:39:29.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "TaskModel.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Models\\TaskModel.cs",
+              "RelativeDocumentMoniker": "Api\\Models\\TaskModel.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Models\\TaskModel.cs",
+              "RelativeToolTip": "Api\\Models\\TaskModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T15:38:31.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpsertTasks.sql",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\UpsertTasks.sql",
+              "RelativeDocumentMoniker": "Database\\StoredProcedures\\UpsertTasks.sql",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\UpsertTasks.sql\r\n(localdb)\\ProjectModels.Database_4\r\n(SARITHA_123\\chint)",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-27T15:37:56.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "TaskRepository.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\TaskRepository.cs",
+              "RelativeDocumentMoniker": "Api\\Repositories\\TaskRepository.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\TaskRepository.cs",
+              "RelativeToolTip": "Api\\Repositories\\TaskRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T15:49:00.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TeamsRepository.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\TeamsRepository.cs",
+              "RelativeDocumentMoniker": "Api\\Repositories\\TeamsRepository.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\TeamsRepository.cs",
+              "RelativeToolTip": "Api\\Repositories\\TeamsRepository.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAAACoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T02:58:01.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "TasksController.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Controllers\\TasksController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\TasksController.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Controllers\\TasksController.cs",
+              "RelativeToolTip": "Api\\Controllers\\TasksController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwCUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T16:00:01.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ITaskService.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Services\\ITaskService.cs",
+              "RelativeDocumentMoniker": "Api\\Services\\ITaskService.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Services\\ITaskService.cs",
+              "RelativeToolTip": "Api\\Services\\ITaskService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T15:59:19.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Api\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Api\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAswJEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T02:32:45.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ProjectRepository.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\ProjectRepository.cs",
+              "RelativeDocumentMoniker": "Api\\Repositories\\ProjectRepository.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\ProjectRepository.cs",
+              "RelativeToolTip": "Api\\Repositories\\ProjectRepository.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowEEAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T15:02:54.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "PayrollRepository.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\PayrollRepository.cs",
+              "RelativeDocumentMoniker": "Api\\Repositories\\PayrollRepository.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\PayrollRepository.cs",
+              "RelativeToolTip": "Api\\Repositories\\PayrollRepository.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwD0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T16:15:24.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LeavesRepository.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\LeavesRepository.cs",
+              "RelativeDocumentMoniker": "Api\\Repositories\\LeavesRepository.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\LeavesRepository.cs",
+              "RelativeToolTip": "Api\\Repositories\\LeavesRepository.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAgwGcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T04:03:28.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ProjectModel.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Models\\ProjectModel.cs",
+              "RelativeDocumentMoniker": "Api\\Models\\ProjectModel.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Models\\ProjectModel.cs",
+              "RelativeToolTip": "Api\\Models\\ProjectModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAcwA4AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T01:48:43.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ProjectService.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Services\\ProjectService.cs",
+              "RelativeDocumentMoniker": "Api\\Services\\ProjectService.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Services\\ProjectService.cs",
+              "RelativeToolTip": "Api\\Services\\ProjectService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T15:32:34.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "IProjectService.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Services\\IProjectService.cs",
+              "RelativeDocumentMoniker": "Api\\Services\\IProjectService.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Services\\IProjectService.cs",
+              "RelativeToolTip": "Api\\Services\\IProjectService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T15:32:23.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IProjectRepository.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\IProjectRepository.cs",
+              "RelativeDocumentMoniker": "Api\\Repositories\\IProjectRepository.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\IProjectRepository.cs",
+              "RelativeToolTip": "Api\\Repositories\\IProjectRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T15:32:15.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UpsertProject.sql",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\UpsertProject.sql",
+              "RelativeDocumentMoniker": "Database\\StoredProcedures\\UpsertProject.sql",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\UpsertProject.sql\r\n(localdb)\\ProjectModels.Database_4\r\n(SARITHA_123\\chint)",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-27T02:04:33.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GetProject.sql",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetProject.sql",
+              "RelativeDocumentMoniker": "Database\\StoredProcedures\\GetProject.sql",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetProject.sql\r\n(localdb)\\ProjectModels.Database_4\r\n(SARITHA_123\\chint)",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-26T15:35:26.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UpsertPayroll.sql",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\UpsertPayroll.sql",
+              "RelativeDocumentMoniker": "Database\\StoredProcedures\\UpsertPayroll.sql",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\UpsertPayroll.sql\r\n(localdb)\\ProjectModels.Database_4\r\n(SARITHA_123\\chint)",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-25T08:07:18.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "TeamsController.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Controllers\\TeamsController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\TeamsController.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Controllers\\TeamsController.cs",
+              "RelativeToolTip": "Api\\Controllers\\TeamsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T04:27:51.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Models\\UserModel.cs",
+              "RelativeDocumentMoniker": "Api\\Models\\UserModel.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Models\\UserModel.cs",
+              "RelativeToolTip": "Api\\Models\\UserModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T15:17:56.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GetUserDetails.sql",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetUserDetails.sql",
+              "RelativeDocumentMoniker": "Database\\StoredProcedures\\GetUserDetails.sql",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetUserDetails.sql\r\n(localdb)\\ProjectModels.Database_4\r\n(SARITHA_123\\chint)",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-12T02:35:21.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "LeavesModel.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Models\\LeavesModel.cs",
+              "RelativeDocumentMoniker": "Api\\Models\\LeavesModel.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Models\\LeavesModel.cs",
+              "RelativeToolTip": "Api\\Models\\LeavesModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T11:39:31.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GetLeaves.sql",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetLeaves.sql",
+              "RelativeDocumentMoniker": "Database\\StoredProcedures\\GetLeaves.sql",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetLeaves.sql\r\n(localdb)\\ProjectModels.Database_4\r\n(SARITHA_123\\chint)",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-22T11:40:05.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LeaveTypesModel.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Models\\LeaveTypesModel.cs",
+              "RelativeDocumentMoniker": "Api\\Models\\LeaveTypesModel.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Models\\LeaveTypesModel.cs",
+              "RelativeToolTip": "Api\\Models\\LeaveTypesModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T11:45:28.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "LeavesService.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Services\\LeavesService.cs",
+              "RelativeDocumentMoniker": "Api\\Services\\LeavesService.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Services\\LeavesService.cs",
+              "RelativeToolTip": "Api\\Services\\LeavesService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T04:14:33.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "LeavesController.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Controllers\\LeavesController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\LeavesController.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Controllers\\LeavesController.cs",
+              "RelativeToolTip": "Api\\Controllers\\LeavesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T04:16:13.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "Api\\Services\\IUserService.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Services\\IUserService.cs",
+              "RelativeToolTip": "Api\\Services\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T14:39:32.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Api\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAOUAAAAAAAAAAAAEwAUBAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T14:32:39.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Api\\Services\\UserService.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Services\\UserService.cs",
+              "RelativeToolTip": "Api\\Services\\UserService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAQwDMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T14:40:09.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "GetDesignations.sql",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetDesignations.sql",
+              "RelativeDocumentMoniker": "Database\\StoredProcedures\\GetDesignations.sql",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetDesignations.sql\r\n(localdb)\\ProjectModels.Database_4\r\n(SARITHA_123\\chint)",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-11T14:34:16.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Api\\Repositories\\IUserRepository.cs",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\Repositories\\IUserRepository.cs",
+              "RelativeToolTip": "Api\\Repositories\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T14:39:04.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "GetDepartments.sql",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetDepartments.sql",
+              "RelativeDocumentMoniker": "Database\\StoredProcedures\\GetDepartments.sql",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Database\\StoredProcedures\\GetDepartments.sql\r\n(localdb)\\ProjectModels.Database_4\r\n(SARITHA_123\\chint)",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-11T14:34:21.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\appsettings.json",
+              "RelativeDocumentMoniker": "Api\\appsettings.json",
+              "ToolTip": "C:\\Practiceprojects\\HRMSPRO\\Backend\\Api\\appsettings.json",
+              "RelativeToolTip": "Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-07T05:38:57.812Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

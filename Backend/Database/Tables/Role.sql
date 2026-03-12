@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[Role]
+(
+    [Id] UNIQUEIDENTIFIER NOT NULL, 
+    [RoleName] NCHAR(100) NOT NULL, 
+    [CreatedDateTime] DATETIME NOT NULL, 
+    [CreatedByUserId] UNIQUEIDENTIFIER NOT NULL, 
+    [UpdatedDateTime] DATETIME  NULL, 
+    [UpdatedByUserId] UNIQUEIDENTIFIER  NULL,
+    CONSTRAINT PK_Role PRIMARY KEY CLUSTERED (Id)
+)
+GO

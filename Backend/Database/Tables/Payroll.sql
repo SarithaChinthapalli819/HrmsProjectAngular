@@ -1,0 +1,19 @@
+﻿CREATE TABLE [dbo].[Payroll]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL,
+    PayrollId UNIQUEIDENTIFIER NOT NULL, 
+    EmployeeId UNIQUEIDENTIFIER NOT NULL,
+    Month INT NOT NULL,
+    Year INT NOT NULL,
+	BasicSalary DECIMAL(18, 2) NOT NULL,
+    Allowances DECIMAL(18, 2) DEFAULT 0,
+    Deductions DECIMAL(18, 2) DEFAULT 0,
+    NetSalary DECIMAL(18, 2) NOT NULL,
+    CreatedDateTime DATETIME NOT NULL,
+	CreatedByUserId UNIQUEIDENTIFIER NOT NULL,  
+	UpdatedDateTime DATETIME NULL,
+	UpdatedByUserId UNIQUEIDENTIFIER NULL, 
+	InActiveDateTime DATETIME NULL,
+    CONSTRAINT PK_Payroll_Id PRIMARY KEY CLUSTERED(Id),
+    CONSTRAINT FK_Payroll_Employee_Id FOREIGN KEY (EmployeeId) REFERENCES  dbo.Employee(Id)
+)

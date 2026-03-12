@@ -1,0 +1,20 @@
+﻿CREATE PROCEDURE [dbo].[GetTimesheetDetailsData]
+(
+	@UserId UNIQUEIDENTIFIER = NULL,
+	@Month INT  NULL,
+	@Year INT = NULL
+)
+AS 
+BEGIN 
+	DECLARE @MonthStart DATETIME = DATEFROMPARTS(@Year,@Month,1),
+	@MonthEnd DATETIME = EOMONTH(DATEFROMPARTS(@Year,@Month,1));
+
+	SELECT ProjectName,TaskName,T.Id AS TaskId,P.Id AS ProjectId,
+	FORMAT(CAST(SWITCHOFFSET(TODATETIMEOFFSET(StartTime,'+00:00'),'+05:30') AS DATETIME),'hh:mm tt') AS StartTime,
+	FORMAT(CAST(SWITCHOFFSET(TODATETIMEOFFSET(EndTime,'+00:00'),'+05:30') AS DATETIME),'hh:mm tt') AS EndTime,
+	CAST(TS.SpentTimeInMin/60.0 AS DECIMAL(10,2)) AS SpentHours,
+	CAST(Date AS DATETIME) AS Date FROM TaskSpentTime TS WITH (NOLOCK)
+	INNER JOIN Tasks T WITH (NOLOCK) ON T.Id = TS.TaskId
+	INNER JOIN Project P WITH (NOLOCK) ON P.Id = T.ProjectId 
+	WHERE Date BETWEEN @MonthStart AND @MonthEnd
+END

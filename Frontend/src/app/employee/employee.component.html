@@ -1,0 +1,63 @@
+<div class="bg-white space-y-6 pt-3 px-6">
+    <div class="flex items-center justify-between">
+        <div class="flex flex-col gap-2">
+            <h1 class="font-extrabold tracking-tight text-slate-900 text-3xl">User Management</h1>
+            <div class="text-bold text-slate-400 font-sm">Manage employee access and personel information.</div>
+        </div>
+        <div class="flex items-center justify-between gap-3">
+            <div class="relative w-72">
+                <i class="fa fa-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-300 text-sm"></i>
+                <input
+                    class="w-full font-bold text-sm text-slate-400 p-4 pl-10 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-slate-100 shadow-md outline-none"
+                    placeholder="Search employees .." />
+            </div>
+            <button (click)="openEmployeeForm()"
+                class="text-white bg-primary-600 rounded-lg px-6 py-4 hover:cursor-pointer hover:bg-primary-700 font-bold text-sm flex items-center justify-between gap-2 shadow-lg shadow-primary-600/20 ">
+                <i class="fa fa-plus text-xs"></i>
+                Add User</button>
+        </div>
+    </div>
+    <div class="rounded-[2rem] bg-white shadow-md p-8 shadow-slate-200 border border-slate-200">
+        <table class="w-full text-[9px]">
+            <thead class="text-left">
+                <tr class="font-bold uppercase tracking-wider text-slate-400">
+                    <th>Employee</th>
+                    <th>Role & Dept</th>
+                    <th>Status</th>
+                    <th>Joined</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let item of userDetails">
+                    <tr class="font-bold  tracking-tight text-[12px]">
+                        <td class="py-6">
+                            <div class="flex gap-2 items-center">
+                                <div class="uppercase w-10 h-10 rounded-2xl text-indigo-700 flex items-center justify-center bg-indigo-50">{{item.userName[0]}}</div>
+                             <div class="flex flex-col">
+                                <span class="font-bold  text-slate-700 tracking-tight">{{item.userName}}</span>
+                                <span class="font-bold uppercase tracking-wide text-slate-400">{{item.email}}</span>
+                            </div>
+                            </div>
+                        </td>
+                        <td class="py-6">
+                            <div class="flex flex-col">
+                                <span class="font-bold  text-slate-700 tracking-tight">{{item.roleName}}</span>
+                                <span class="font-bold uppercase tracking-wide text-slate-400">{{item.departmentName}}</span>
+                            </div>
+                        </td>
+                        <td class="py-6 font-bold uppercase tracking-wide text-slate-700">{{item.isActive}}</td>
+                        <td class="py-6 font-bold uppercase tracking-wide text-slate-700">{{item.joiningDate | date : 'MMM d, yyyy'}}</td>
+                        <td class="py-6"> <button (click)="editEmployee(item)">
+                            <i class="fa fa-pencil text-slate-400 text-sm"></i>
+                        </button></td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+
+    <ng-container *ngIf="isOpened">
+        <app-employee-form (formClosed)="formClosed($event)" [data]="data"></app-employee-form>
+    </ng-container>
+</div>

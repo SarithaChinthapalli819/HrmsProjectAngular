@@ -1,0 +1,55 @@
+<div class="flex items-center inset-0 h-full w-full fixed justify-center backdrop-blur-md">
+    <div class="bg-white rounded-[2rem] w-full max-w-xl max-h-[90vh] border flex flex-col">
+        <div class="flex items-center justify-between p-6 border-b">
+            <div class="space-y-1">
+                <div class="font-bold text-2xl text-slate-900">Create New Team</div>
+                <div class="font-bold text-sm text-slate-400">Strategic Resource Group</div>
+            </div>
+            <button (click)="closeForm(false)">
+                <i class="fa fa-times text-xl text-slate-500"></i>
+            </button>
+        </div>
+        <form class="flex flex-col flex-1 overflow-hidden" [formGroup]="teamsForm" (ngSubmit)="onSubmit()">
+            <div class="space-y-6 overflow-auto p-6 flex-1">
+                <div class="flex flex-col">
+                    <div class="space-y-2">
+                        <label class="font-bold text-sm text-slate-500 tracking-wider uppercase">Team Name</label>
+                        <input class="form-input-pro placeholder:font-bold placeholder:text-slate-300"
+                            formControlName="teamName" placeholder="Team name" />
+                    </div>
+                    <div *ngIf="teamsForm.get('teamName')?.touched && teamsForm.get('teamName')?.hasError('required')"
+                        class="text-rose-500">Team Name is required</div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="space-y-2">
+                        <label class="font-bold text-sm text-slate-500 tracking-wider uppercase">Team Lead</label>
+                        <select class="form-input-pro placeholder:font-bold placeholder:text-slate-300"
+                            placeholder="Team Lead" formControlName="teamAdminId">
+                            <option>Select team lead</option>
+                            <option *ngFor="let item of userDetails" [value]="item.userId">
+                                {{item.userName}}
+                            </option>
+                        </select>
+                    </div>
+                    <div *ngIf="teamsForm.get('teamAdminId')?.touched && teamsForm.get('teamAdminId')?.hasError('required')"
+                        class="text-rose-500">Team Admin should be selected</div>
+                </div>
+                <div class="flex flex-col space-y-2">
+                    <label class="font-bold text-sm text-slate-500 tracking-wider uppercase">Description</label>
+                    <textarea class="form-input-pro placeholder:font-bold placeholder:text-slate-300"
+                        formControlName="description" placeholder="What this team will focus on"></textarea>
+                </div>
+                <div class="flex gap-2">
+                    <input type="checkbox" formControlName="isActive" />
+                    <div class="font-bold text-md text-slate-500"> Active Team</div>
+                </div>
+            </div>
+            <div class="p-6 flex items-center border-t gap-2">
+                <button type="button" class="rounded-lg border flex-1 p-3 bg-slate-50 text-slate-900 hover:bg-slate-100"
+                    (click)="closeForm(false)">Cancel</button>
+                <button class="rounded-lg border flex-[2] p-3 bg-primary-600 text-white hover:bg-primary-700"
+                    [disabled]="teamsForm.invalid">Create Team</button>
+            </div>
+        </form>
+    </div>
+</div>

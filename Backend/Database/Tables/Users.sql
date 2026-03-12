@@ -1,0 +1,18 @@
+﻿CREATE TABLE [dbo].[Users]
+(
+    Id UNIQUEIDENTIFIER NOT NULL, 
+    FirstName NVARCHAR(150) NOT NULL,
+    LastName NVARCHAR(150) NULL,
+    UserName NVARCHAR(150) NOT NULL,
+    Email NVARCHAR(250) NOT NULL,
+    PasswordHash NVARCHAR(500) NOT NULL,
+    CreatedDateTime DATETIME NOT NULL,
+    CreatedByUserId UNIQUEIDENTIFIER NOT NULL,  
+    UpdatedDateTime DATETIME NULL,
+    UpdatedByUserId UNIQUEIDENTIFIER NULL, 
+    IsActive Bit NOT NULL,
+    InActiveDateTime DATETIME NULL,
+    JoiningDate DATE NULL
+    CONSTRAINT PK_Users PRIMARY KEY CLUSTERED (Id)
+);
+GO

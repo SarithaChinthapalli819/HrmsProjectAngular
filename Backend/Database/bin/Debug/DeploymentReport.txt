@@ -1,0 +1,24 @@
+﻿** Highlights
+     Tables that will be recreated with data migrated
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Department] (Table)
+       [dbo].[Designation] (Table)
+       [dbo].[Employee] (Table)
+       [dbo].[Role] (Table)
+       [dbo].[User] (Table)
+       [dbo].[UserRole] (Table)
+       [dbo].[FK_Employee_UserId] (Foreign Key)
+       [dbo].[FK_Employee_DesignationId] (Foreign Key)
+       [dbo].[FK_Employee_DepartmentId] (Foreign Key)
+       [dbo].[FK_User_Role] (Foreign Key)
+
+** Supporting actions

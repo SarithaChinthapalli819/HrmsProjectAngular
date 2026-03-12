@@ -1,0 +1,50 @@
+<div class="flex h-screen overflow-hidden">
+
+    <aside class="w-64 bg-white border-r border-slate-200 flex flex-col space-y-1">
+            <div class="h-16 flex text-primary-500 uppercase gap-2 text-xl font-bold p-4 px-6 border-b border-slate-100">
+                <span class="text-primary-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-box">
+                        <path
+                            d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+                        <path d="m3.3 7 8.7 5 8.7-5" />
+                        <path d="M12 22V12" />
+                    </svg> 
+                </span>
+                HRMS<span class="text-slate-900">PRO</span>
+            </div>
+            <nav class="p-3 flex flex-col flex-1 overflow-y-auto">
+                <a [routerLink]="item.path" routerLinkActive="bg-primary-100 text-primary-400" [routerLinkActiveOptions]="{exact:true}"
+                *ngFor="let item of menuItems" class="text-sm font-medium text-slate-500 flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary-100 hover:cursor-pointer">
+                    <i [ngClass]="item.icon" class="w-5 h-5 flex items-center justify-center"></i>
+                    {{item.label}}
+                </a>
+            </nav>
+            <div class="flex items-center justify-between p-4">
+                <div class="flex gap-3 items-center">
+                    <div class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-white">S</div>
+                    <div class="flex flex-col text-xs font-bold">
+                        <span class="text-slate-800">Saritha</span>
+                        <span class="uppercase text-slate-500 text-[8px]">Admin</span>
+                    </div>
+                </div>
+                  <button class="text-slate-400 hover:text-rose-500">
+                     <i class="fa fa-sign-out-alt"></i>
+                </button>
+            </div>
+    </aside>
+    <main class="flex flex-col flex-1">
+        <header class="h-16 border-b border-slate-200 bg-white">
+            <div class="flex flex-1 justify-between p-4">
+                <div class="font-bold text-xl text-slate-900">Dashboard</div>
+                <button class="text-slate-400 hover:text-rose-500">
+                     <i class="fa fa-power-off text-xl"></i>
+                </button>
+            </div>
+        </header>
+        <div class="py-2 overflow-hidden bg-white h-full">
+            <router-outlet></router-outlet>
+        </div>
+    </main>
+</div>

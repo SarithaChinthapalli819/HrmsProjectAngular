@@ -1,0 +1,13 @@
+﻿CREATE TABLE [dbo].[Team]
+(
+	Id UNIQUEIDENTIFIER NOT NULL,
+	TeamName Nvarchar(250) Not NULL,
+    [Description] NVARCHAR(MAX) NULL,
+	CreatedDateTime DATETIME NOT NULL,
+    CreatedByUserId UNIQUEIDENTIFIER NOT NULL,  
+    UpdatedDateTime DATETIME NULL,
+    UpdatedByUserId UNIQUEIDENTIFIER NULL, 
+    IsActive Bit NOT NULL,
+    InActiveDateTime DATETIME NULL,
+    CONSTRAINT PK_Team PRIMARY KEY CLUSTERED (Id)
+)

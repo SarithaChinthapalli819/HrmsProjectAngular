@@ -1,0 +1,4110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="150" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="Database.dll" />
+			<Metadata Name="FileName" Value="C:\PRACTICEPROJECTS\HRMSPRO\BACKEND\DATABASE\OBJ\DEBUG\DATABASE.DLL" />
+			<Metadata Name="AssemblyName" Value="Database" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Practiceprojects\HRMSPRO\Backend\Database\obj\Debug\Database.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Department]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Department].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Department].[DepartmentName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Department].[CreatedDateTime]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Department].[CreatedByUserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Department].[UpdatedDateTime]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Department].[UpdatedByUserId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Designation]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Designation].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Designation].[DesignationName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Designation].[CreatedDateTime]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Designation].[CreatedByUserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Designation].[UpdatedDateTime]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Designation].[UpdatedByUserId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Employee]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Employee].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Employee].[EmployeeCode]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Employee].[UserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Employee].[Designationid]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Employee].[DepartmentId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Employee].[CreatedDateTime]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Employee].[CreatedByUserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Employee].[UpdatedDateTime]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Employee].[UpdatedByUserId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Employee].[InActiveDateTime]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
+						<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
+						<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
+						<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Employee_DepartmentId]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Employee].[DepartmentId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Employee]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Department].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Department]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="8" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Employee_DesignationId]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Employee].[Designationid]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Employee]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Designation].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Designation]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="7" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Employee_UserId]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Employee].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Employee]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Users].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="6" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Leaves_LeavetypeId]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Leaves].[LeaveTypeId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Leaves]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[LeaveTypes].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[LeaveTypes]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="9" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Role_UserId]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[UserRole].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[UserRole]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Users].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="10" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Team_TeamId]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[TeamAdmin].[TeamId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[TeamAdmin]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Team].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Team]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="11" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Team_UserId]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[TeamAdmin].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[TeamAdmin]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Users].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_TeamId]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Teammember].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Teammember]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Users].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="13" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_User_Role]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[UserRole].[RoleId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[UserRole]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Role].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Role]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="14" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_UserId]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Teammember].[TeamId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Teammember]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Team].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Team]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="15" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetDepartments]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SELECT Id,DepartmentName FROM Department WITH (NOLOCK)
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Department]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Department].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Department].[DepartmentName]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="112" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[GetDepartments]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetDesignations]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SELECT Id,DesignationName FROM Designation WITH (NOLOCK)
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Designation]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Designation].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Designation].[DesignationName]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="115" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[GetDesignations]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetLeaves]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SELECT L.Id AS LeaveId,LT.LeaveType AS LeaveTypeName,L.DateFrom,L.DateTo,L.Reason AS [Description] FROM Leaves L
+	INNER JOIN LeaveTypes LT WITH (NOLOCK) ON LT.Id = L.LeaveTypeId
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Leaves]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LeaveTypes]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LeaveTypes].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[LeaveTypeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LeaveTypes].[LeaveType]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[DateFrom]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[DateTo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[Reason]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="231" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[GetLeaves]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetLeaveTypes]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SELECT Id AS LeaveTypeId,LeaveType AS LeaveTypeName,TotalAllowance,Used, Remaining,Colour,Icon  FROM LeaveTypes
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[LeaveTypes]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LeaveTypes].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LeaveTypes].[LeaveType]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LeaveTypes].[TotalAllowance]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LeaveTypes].[Used]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LeaveTypes].[Remaining]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LeaveTypes].[Colour]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LeaveTypes].[Icon]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="168" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[GetLeaveTypes]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetRoles]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SELECT Id,RoleName FROM [Role]
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Role]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Role].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Role].[RoleName]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="82" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[GetRoles]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetTeammembers]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SELECT T.TeamName as TeamName,U.FirstName + ' ' + U.LastName AS TeamMemberName,U.Id AS TeamMemberId,U.Email AS Email FROM TEAM T WITH (NOLOCK)
+	INNER JOIN Teammember TM WITH (NOLOCK) ON TM.TeamId = T.Id
+	INNER JOIN Users U WITH (NOLOCK) ON U.Id = TM.UserId
+	WHERE TM.InActiveDateTime IS NULL AND U.InActiveDateTime IS NULL
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Team]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Teammember]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Teammember].[TeamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Teammember].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[TeamName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[LastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Teammember].[InActiveDateTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[InActiveDateTime]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetTeammembers].[@Teamid]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="423" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[GetTeammembers]&#xD;&#xA;(&#xD;&#xA;&#x9;@Teamid UNIQUEIDENTIFIER = NULL&#xD;&#xA;)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetTeams]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+    
+	SELECT T.Id AS TeamId,T.TeamName,T.IsActive,
+	T.[Description],U.FirstName + ' ' + U.LastName AS TeamAdminName,
+	(SELECT COUNT(*) FROM Teammember WHERE TeamId = T.Id AND InActiveDateTime IS NULL) AS TotalCount,
+	U.Id AS TeamAdminId FROM Team T WITH (NOLOCK)
+	LEFT JOIN TeamAdmin TA  WITH (NOLOCK) ON TA.TeamId = T.Id
+	LEFT JOIN Users U WITH (NOLOCK) ON U.Id = TA.UserId
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Team]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamAdmin]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamAdmin].[TeamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamAdmin].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[TeamName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[LastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Teammember]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Teammember].[TeamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Teammember].[InActiveDateTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="431" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[GetTeams]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetUserDetails]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SELECT U.Id AS UserId,FirstName,LastName,UserName,Email,E.EmployeeCode,Designationid,DepartmentId,DE.DepartmentName,DG.DesignationName,IsActive,R.RoleName,U.JoiningDate,R.Id AS RoleId,PasswordHash AS Password FROM [Users] U WITH (NOLOCK)
+	INNER JOIN Employee E WITH (NOLOCK) ON E.UserId = U.Id
+	INNER JOIN Department DE WITH (NOLOCK) ON DE.Id = E.DepartmentId
+	INNER JOIN Designation DG WITH (NOLOCK) ON DG.Id = E.Designationid
+	INNER JOIN UserRole UR WITH (NOLOCK) ON UR.UserId = U.Id
+	INNER JOIN [Role] R WITH (NOLOCK) ON R.Id = UR.RoleId
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Department]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Department].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee].[DepartmentId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Designation]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Designation].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee].[Designationid]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UserRole]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UserRole].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Role]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Role].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UserRole].[RoleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[LastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee].[EmployeeCode]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee].[Designationid]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee].[DepartmentId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Department].[DepartmentName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Designation].[DesignationName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Role].[RoleName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[JoiningDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Role].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[PasswordHash]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="603" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[GetUserDetails]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetUserDetailsWithUsername]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SELECT Id AS UserId,UserName,Email,PasswordHash AS [Password] FROM [Users] WITH (NOLOCK) WHERE UserName = @UserName AND IsActive = 1
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[PasswordHash]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetUserDetailsWithUsername].[@UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[IsActive]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetUserDetailsWithUsername].[@UserName]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[null]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="241" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[GetUserDetailsWithUsername]&#xD;&#xA;(&#xD;&#xA;&#x9;@UserName NVarchar(max) = null&#xD;&#xA;)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Leaves]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Leaves].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Leaves].[LeaveTypeId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Leaves].[DateFrom]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Leaves].[DateTo]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Leaves].[UserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Leaves].[Reason]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Leaves].[IsApproved]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Leaves].[CreatedDateTime]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Leaves].[CreatedByUserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Leaves].[UpdatedDateTime]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Leaves].[UpdatedByUserId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Leaves].[InActiveDateTime]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="16" />
+			<AttachedAnnotation Disambiguator="9" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[LeaveTypes]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LeaveTypes].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LeaveTypes].[LeaveType]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LeaveTypes].[TotalAllowance]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LeaveTypes].[Used]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LeaveTypes].[Remaining]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LeaveTypes].[Colour]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="200" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LeaveTypes].[Icon]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LeaveTypes].[CreatedDateTime]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LeaveTypes].[CreatedByUserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LeaveTypes].[UpdatedDateTime]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LeaveTypes].[UpdatedByUserId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LeaveTypes].[InActiveDateTime]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="17" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Department]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Department].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Department]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="3" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Designation]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Designation].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Designation]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="4" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Employee]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Employee].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Employee]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="5" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Leaves_Id]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Leaves].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Leaves]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="16" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Leavetype_Id]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[LeaveTypes].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[LeaveTypes]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="17" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Role]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Role].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Role]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="18" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Team]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Team].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Team]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="19" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_TeamAdmin]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[TeamAdmin].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[TeamAdmin]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="20" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_TeamMember]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Teammember].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Teammember]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="21" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_UserRole]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[UserRole].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[UserRole]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="22" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Users]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Users].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="23" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Role]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Role].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Role].[RoleName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Role].[CreatedDateTime]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Role].[CreatedByUserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Role].[UpdatedDateTime]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Role].[UpdatedByUserId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="18" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Team]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Team].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Team].[TeamName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Team].[Description]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Team].[CreatedDateTime]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Team].[CreatedByUserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Team].[UpdatedDateTime]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Team].[UpdatedByUserId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Team].[IsActive]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Team].[InActiveDateTime]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="19" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[TeamAdmin]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TeamAdmin].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TeamAdmin].[TeamId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TeamAdmin].[UserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TeamAdmin].[CreatedDateTime]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TeamAdmin].[CreatedByUserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TeamAdmin].[UpdatedDateTime]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TeamAdmin].[UpdatedByUserId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[TeamAdmin].[InActiveDateTime]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="20" />
+			<AttachedAnnotation Disambiguator="12" />
+			<AttachedAnnotation Disambiguator="11" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Teammember]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Teammember].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Teammember].[TeamId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Teammember].[UserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Teammember].[CreatedDateTime]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Teammember].[CreatedByUserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Teammember].[UpdatedDateTime]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Teammember].[UpdatedByUserId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Teammember].[InActiveDateTime]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="21" />
+			<AttachedAnnotation Disambiguator="13" />
+			<AttachedAnnotation Disambiguator="15" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UpsertLeave]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	DECLARE @OperationPerformedBy UNIQUEIDENTIFIER = (SELECT TOP 1 Id From [Users] WHERE UserName LIKE '%Support%') ;
+    IF(@LeaveId IS NULL)
+        SET @LeaveId = NEWID();
+
+    IF EXISTS(
+        SELECT 1 FROM Leaves WHERE UserId = @UserId  
+            AND DateFrom >= @DateFrom AND  DateTo <= @DateTo AND Id <> @LeaveId
+    )
+    BEGIN 
+        RAISERROR('Leave already existed on selected range.', 16, 1);
+        RETURN;
+    END
+    ELSE
+    BEGIN
+        MERGE INTO LEAVES AS TARGET
+        USING(
+            SELECT
+                @LeaveId AS LeaveId,
+                @LeaveTypeId AS LeaveTypeId,
+                @Description AS Reason,
+                @DateFrom AS DateFrom,
+                @DateTo AS DateTo,
+                @UserId AS UserId,
+                @IsApproved AS IsApproved
+        )
+        AS SOURCE 
+        ON TARGET.Id = SOURCE.LeaveId
+        WHEN MATCHED THEN
+        UPDATE SET
+            TARGET.LeaveTypeId = SOURCE.LeaveTypeId,
+	        TARGET.DateFrom = SOURCE.DateFrom,
+	        TARGET.DateTo = SOURCE.DateTo,
+            TARGET.Reason = SOURCE.Reason,
+            TARGET.UpdatedDateTime = GETUTCDATE(),
+            TARGET.UpdatedByUserId = @OperationPerformedBy
+        WHEN NOT MATCHED THEN 
+        INSERT 
+        (
+            [Id],
+	        LeaveTypeId,
+	        DateFrom,
+	        DateTo,
+	        UserId,
+	        Reason,
+	        IsApproved,
+            [CreatedByUserId],
+            [CreatedDateTime]
+        )
+        VALUES
+        (
+            NEWID(),
+            SOURCE.LeaveTypeId,
+            SOURCE.DateFrom,
+	        SOURCE.DateTo,
+	        SOURCE.UserId,
+	        SOURCE.Reason,
+            SOURCE.IsApproved,
+            @OperationPerformedBy,
+            GETUTCDATE()
+        );
+    END
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertLeave].[@LeaveId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertLeave].[@UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[DateFrom]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertLeave].[@DateFrom]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[DateTo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertLeave].[@DateTo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertLeave].[@LeaveTypeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertLeave].[@Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertLeave].[@IsApproved]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertLeave].[@LeaveId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[LeaveTypeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertLeave].[@LeaveTypeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[DateFrom]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertLeave].[@DateFrom]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[DateTo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertLeave].[@DateTo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[Reason]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertLeave].[@Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[UpdatedDateTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[UpdatedByUserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[LeaveTypeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[DateFrom]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[DateTo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[Reason]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[IsApproved]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[CreatedByUserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Leaves].[CreatedDateTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertLeave].[@UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertLeave].[@IsApproved]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertLeave].[@LeaveId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertLeave].[@LeaveTypeId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertLeave].[@Description]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertLeave].[@DateFrom]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertLeave].[@DateTo]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertLeave].[@UserId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertLeave].[@IsApproved]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="2114" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpsertLeave]&#xD;&#xA;(&#xD;&#xA;    @LeaveId UNIQUEIDENTIFIER = NULL,&#xD;&#xA;    @LeaveTypeId UNIQUEIDENTIFIER = NULL,&#xD;&#xA;    @Description NVARCHAR(MAX) = NULL,&#xD;&#xA;    @DateFrom DATETIME = NULL,&#xD;&#xA;    @DateTo DATETIME = NULL,&#xD;&#xA;    @UserId UNIQUEIDENTIFIER = NULL,&#xD;&#xA;    @IsApproved BIT = NULL&#xD;&#xA;)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UpsertTeamMembers]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+    DECLARE @OperationPerformedBy UNIQUEIDENTIFIER = (SELECT TOP 1 Id From [Users] WHERE UserName LIKE '%Support%') ;
+
+	IF(@DeleteMember = 1)
+	BEGIN
+		UPDATE Teammember SET InActiveDateTime = GETUTCDATE() WHERE TeamId =@TeamId AND UserId = @TeamMemberId;
+	END
+	ELSE
+	BEGIN
+		MERGE INTO TEAMMEMBER AS TARGET
+		USING(
+		 SELECT @TeamId AS TeamId,
+				@TeamMemberId AS UserId  
+		) AS SOURCE
+		ON TARGET.TeamId = SOURCE.TeamId AND TARGET.UserId = SOURCE.UserId
+		WHEN MATCHED THEN 
+		UPDATE SET  
+			TARGET.UpdatedDateTime = GETUTCDATE(),
+			TARGET.UpdatedByUserId = @OperationPerformedBy,
+			TARGET.InActiveDateTime = NULL
+		WHEN NOT MATCHED THEN
+		 INSERT (Id,TeamId,UserId,CreatedByUserId,CreatedDateTime )
+		 VALUES (
+			 NEWID(),
+			 SOURCE.TeamId,
+			 SOURCE.UserId,
+			 @OperationPerformedBy,
+			 GETUTCDATE()
+		 );
+	 END
+
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertTeamMembers].[@DeleteMember]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Teammember]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Teammember].[InActiveDateTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Teammember].[TeamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertTeamMembers].[@TeamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Teammember].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertTeamMembers].[@TeamMemberId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Teammember].[TeamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertTeamMembers].[@TeamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Teammember].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertTeamMembers].[@TeamMemberId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Teammember].[UpdatedDateTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Teammember].[UpdatedByUserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Teammember].[InActiveDateTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Teammember].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Teammember].[CreatedByUserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Teammember].[CreatedDateTime]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertTeamMembers].[@TeamId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertTeamMembers].[@TeamMemberId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertTeamMembers].[@DeleteMember]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1026" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpsertTeamMembers]&#xD;&#xA;(&#xD;&#xA;&#x9;@TeamId UNIQUEIDENTIFIER = NULL,&#xD;&#xA;&#x9;@TeamMemberId UNIQUEIDENTIFIER = NULL,&#xD;&#xA;&#x9;@DeleteMember BIT = NULL&#xD;&#xA;)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UpsertTeams]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	DECLARE @OperationPerformedBy UNIQUEIDENTIFIER = (SELECT TOP 1 Id From [Users] WHERE UserName LIKE '%Support%') ;
+	IF(@Teamid IS NULL)
+		SET @TeamId = NEWID();
+
+	MERGE INTO TEAM AS TARGET
+	USING(
+	SELECT @TeamId  AS TeamId,
+		   @TeamName AS TeamName,
+		   @TeamAdminId AS TeamAdminId,  
+		   @Description AS [Description],
+		   @IsActive AS IsActive
+	) AS SOURCE 
+	ON SOURCE.TeamId = TARGET.Id
+	WHEN MATCHED THEN
+	UPDATE SET
+		TARGET.TeamName = SOURCE.TeamName,
+		TARGET.[Description] = SOURCE.[Description],
+		TARGET.IsActive = SOURCE.IsActive,
+		TARGET.UpdatedDateTime = GETUTCDATE(),
+        TARGET.UpdatedByUserId = @OperationPerformedBy
+	WHEN NOT MATCHED THEN
+	INSERT (
+		Id,
+		TeamName,
+		[Description],
+		IsActive,
+		[CreatedByUserId],
+		[CreatedDateTime]
+	)
+	VALUES
+	(
+	 SOURCE.TeamId,
+	 SOURCE.TeamName,
+	 SOURCE.[Description],
+	 SOURCE.IsActive,
+	 @OperationPerformedBy,
+	 GETUTCDATE()
+	);
+
+	MERGE INTO TeamAdmin AS TARGET
+	USING(
+	SELECT @TeamId  AS TeamId,
+		   @TeamAdminId AS TeamAdminId 
+	) AS SOURCE 
+	ON SOURCE.TeamId = TARGET.Id
+	WHEN MATCHED THEN
+	UPDATE SET
+		TARGET.TeamId = SOURCE.TeamId,
+		TARGET.UserId = SOURCE.TeamAdminId, 
+		TARGET.UpdatedDateTime = GETUTCDATE(),
+        TARGET.UpdatedByUserId = @OperationPerformedBy
+	WHEN NOT MATCHED THEN
+	INSERT (
+		Id,
+		TeamId,
+		UserId, 
+		[CreatedByUserId],
+		[CreatedDateTime]
+	)
+	VALUES
+	(
+	 NEWID(),
+	 SOURCE.TeamId,
+	 SOURCE.TeamAdminId, 
+	 @OperationPerformedBy,
+	 GETUTCDATE()
+	);
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertTeams].[@TeamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertTeams].[@TeamName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertTeams].[@TeamAdminId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertTeams].[@Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertTeams].[@IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertTeams].[@TeamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[TeamName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertTeams].[@TeamName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertTeams].[@Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertTeams].[@IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[UpdatedDateTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[UpdatedByUserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[TeamName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[Description]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[CreatedByUserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[CreatedDateTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamAdmin]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertTeams].[@TeamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamAdmin].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamAdmin].[TeamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamAdmin].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertTeams].[@TeamAdminId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamAdmin].[UpdatedDateTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamAdmin].[UpdatedByUserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamAdmin].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamAdmin].[TeamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamAdmin].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamAdmin].[CreatedByUserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamAdmin].[CreatedDateTime]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertTeams].[@TeamId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertTeams].[@TeamAdminId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertTeams].[@TeamName]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertTeams].[@Description]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="500" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertTeams].[@IsActive]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1754" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpsertTeams]&#xD;&#xA;(&#xD;&#xA; @TeamId UNIQUEIDENTIFIER = NULL,&#xD;&#xA; @TeamAdminId UNIQUEIDENTIFIER = NULL, &#xD;&#xA; @TeamName NVARCHAR(250) = NULL,&#xD;&#xA; @Description  NVARCHAR(500) = NULL,&#xD;&#xA; @IsActive BIT = NULL&#xD;&#xA;)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UpsertUser]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+    SET NOCOUNT ON;
+
+    -- If Id is NULL, generate new one
+    IF @UserId IS NULL
+        SET @UserId = NEWID();
+    
+    IF(@IsRegister =1 )
+    BEGIN
+        SET @RoleId = '0A602494-2947-4E9D-AB63-0B791E1ACABD';
+        SET @EmployeeCode = @UserName;
+    END
+
+    DECLARE @OperationPerformedBy UNIQUEIDENTIFIER = (SELECT TOP 1 Id From [Users] WHERE UserName LIKE '%Support%') ;
+
+    MERGE INTO Users AS TARGET
+    USING (
+        SELECT
+            @UserId AS Id,
+            @FirstName AS FirstName,
+            @LastName AS LastName,
+            @UserName AS UserName,
+            @Email AS Email,
+            @PasswordHash AS PasswordHash, 
+            @JoiningDate AS JoiningDate
+    ) AS SOURCE
+    ON TARGET.Id = SOURCE.Id
+
+    WHEN MATCHED THEN
+        UPDATE SET
+            TARGET.FirstName = SOURCE.FirstName,
+            TARGET.LastName = SOURCE.LastName,
+            TARGET.UserName = SOURCE.UserName,
+            TARGET.Email = SOURCE.Email,
+            TARGET.PasswordHash = SOURCE.PasswordHash,
+            TARGET.UpdatedDateTime = GETUTCDATE(),
+            TARGET.UpdatedByUserId = @OperationPerformedBy,
+            TARGET.JoiningDate =SOURCE.JoiningDate
+
+    WHEN NOT MATCHED THEN
+        INSERT (Id, FirstName, LastName, UserName, Email, PasswordHash,IsActive,CreatedByUserId,CreatedDateTime,JoiningDate)
+        VALUES (
+            SOURCE.Id,
+            SOURCE.FirstName,
+            SOURCE.LastName,
+            SOURCE.UserName,
+            SOURCE.Email,
+            SOURCE.PasswordHash,
+            1,
+            @OperationPerformedBy,
+            GETUTCDATE(),
+            JoiningDate
+        );
+
+    MERGE INTO Employee AS TARGET
+    USING(
+        SELECT @UserId AS UserId,
+                @DepartmentId AS DepartmentId,
+                @DesignationId AS DesignationId,
+                @EmployeeCode AS EmployeeCode 
+        ) AS SOURCE
+        ON TARGET.UserId = SOURCE.UserId
+        WHEN MATCHED THEN
+        UPDATE 
+        SET TARGET.EmployeeCode = SOURCE.EmployeeCode,
+             TARGET.DepartmentId = SOURCE.DepartmentId,
+             TARGET.DesignationId = SOURCE.DesignationId,
+             TARGET.UpdatedDateTime = GETUTCDATE(),
+             TARGET.UpdatedByUserId = @OperationPerformedBy
+            
+        WHEN NOT MATCHED THEN
+        INSERT(
+            Id,
+            UserId,
+            EmployeeCode,
+            DepartmentId,
+            DesignationId,
+            [CreatedByUserId],
+            [CreatedDateTime]
+        )
+        VALUES(
+            NEWID(),
+            SOURCE.UserId,
+            SOURCE.EmployeeCode,
+            SOURCE.DepartmentId,
+            SOURCE.DesignationId,
+            @OperationPerformedBy,
+            GETUTCDATE()
+        );
+
+
+   MERGE INTO UserRole AS TARGET
+    USING (
+        SELECT 
+            @UserId AS UserId,
+            @RoleId AS RoleId
+    ) AS SOURCE
+    ON TARGET.UserId = SOURCE.UserId
+
+    WHEN MATCHED THEN
+        UPDATE SET 
+            TARGET.RoleId = SOURCE.RoleId,
+            TARGET.UpdatedDateTime = GETUTCDATE(),
+            TARGET.UpdatedByUserId = @OperationPerformedBy
+
+    WHEN NOT MATCHED THEN
+        INSERT (
+            Id,
+            UserId,
+            RoleId,
+            [CreatedByUserId],
+            [CreatedByDateTime]
+        )
+        VALUES (
+            NEWID(),
+            SOURCE.UserId,
+            SOURCE.RoleId,
+            @OperationPerformedBy,
+            GETUTCDATE()
+        ); 
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@IsRegister]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@RoleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@EmployeeCode]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@LastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@PasswordHash]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@JoiningDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[LastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@LastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[PasswordHash]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@PasswordHash]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[UpdatedDateTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[UpdatedByUserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[JoiningDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@JoiningDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[LastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[PasswordHash]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[CreatedByUserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[CreatedDateTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[JoiningDate]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@DepartmentId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@DesignationId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee].[EmployeeCode]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@EmployeeCode]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee].[DepartmentId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@DepartmentId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee].[Designationid]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@DesignationId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee].[UpdatedDateTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee].[UpdatedByUserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee].[EmployeeCode]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee].[DepartmentId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee].[Designationid]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee].[CreatedByUserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Employee].[CreatedDateTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UserRole]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UserRole].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UserRole].[RoleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpsertUser].[@RoleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UserRole].[UpdatedDateTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UserRole].[UpdatedByUserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UserRole].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UserRole].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UserRole].[RoleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UserRole].[CreatedByUserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UserRole].[CreatedByDateTime]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertUser].[@UserId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertUser].[@FirstName]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertUser].[@LastName]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertUser].[@UserName]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertUser].[@Email]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertUser].[@PasswordHash]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="500" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertUser].[@RoleId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertUser].[@DepartmentId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertUser].[@DesignationId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertUser].[@IsActive]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertUser].[@IsRegister]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertUser].[@JoiningDate]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpsertUser].[@EmployeeCode]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="4078" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpsertUser]&#xD;&#xA;(&#xD;&#xA;    @UserId UNIQUEIDENTIFIER = NULL, &#xD;&#xA;    @FirstName NVARCHAR(150) = NULL,&#xD;&#xA;    @LastName NVARCHAR(150) = NULL,&#xD;&#xA;    @UserName NVARCHAR(150) = NULL,&#xD;&#xA;    @Email NVARCHAR(250) = NULL,&#xD;&#xA;    @PasswordHash NVARCHAR(500) = NULL,&#xD;&#xA;    @RoleId UNIQUEIDENTIFIER = NULL,&#xD;&#xA;    @DepartmentId UNIQUEIDENTIFIER = NULL,&#xD;&#xA;    @DesignationId UNIQUEIDENTIFIER = NULL,&#xD;&#xA;    @IsActive BIT = NULL,&#xD;&#xA;    @IsRegister BIT = NULL,&#xD;&#xA;    @JoiningDate Date = NULL,&#xD;&#xA;    @EmployeeCode NVARCHAR(MAX) = NULL&#xD;&#xA;)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[UserRole]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UserRole].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UserRole].[RoleId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UserRole].[UserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UserRole].[CreatedByUserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UserRole].[CreatedByDateTime]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UserRole].[UpdatedByUserId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UserRole].[UpdatedDateTime]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UserRole].[InActiveDateTime]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="22" />
+						<AttachedAnnotation Disambiguator="10" />
+						<AttachedAnnotation Disambiguator="14" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Users]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Users].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Users].[FirstName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Users].[LastName]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Users].[UserName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Users].[Email]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Users].[PasswordHash]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="500" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Users].[CreatedDateTime]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Users].[CreatedByUserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Users].[UpdatedDateTime]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Users].[UpdatedByUserId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Users].[IsActive]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Users].[InActiveDateTime]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Users].[JoiningDate]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="23" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+	</Model>
+</DataSchemaModel>

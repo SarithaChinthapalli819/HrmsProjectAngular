@@ -1,0 +1,10 @@
+C:\Practiceprojects\HRMSPRO\Backend\Database\bin\Debug\Database.dacpac
+C:\Practiceprojects\HRMSPRO\Backend\Database\bin\Debug\Database.dll
+C:\Practiceprojects\HRMSPRO\Backend\Database\bin\Debug\Database.pdb
+C:\Practiceprojects\HRMSPRO\Backend\Database\obj\Debug\Database.sqlproj.AssemblyReference.cache
+C:\Practiceprojects\HRMSPRO\Backend\Database\obj\Debug\Model.xml
+C:\Practiceprojects\HRMSPRO\Backend\Database\obj\Debug\refactor.xml
+C:\Practiceprojects\HRMSPRO\Backend\Database\obj\Debug\postdeploy.sql
+C:\Practiceprojects\HRMSPRO\Backend\Database\obj\Debug\predeploy.sql
+C:\Practiceprojects\HRMSPRO\Backend\Database\obj\Debug\Database.dll
+C:\Practiceprojects\HRMSPRO\Backend\Database\obj\Debug\Database.pdb

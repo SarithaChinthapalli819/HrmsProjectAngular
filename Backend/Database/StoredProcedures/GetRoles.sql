@@ -1,0 +1,5 @@
+﻿CREATE PROCEDURE [dbo].[GetRoles]
+AS
+BEGIN
+	SELECT Id,RoleName FROM [Role]
+END

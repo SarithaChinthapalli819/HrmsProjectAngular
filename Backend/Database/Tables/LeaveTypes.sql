@@ -1,0 +1,16 @@
+﻿CREATE TABLE [dbo].[LeaveTypes]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL,
+	LeaveType NVARCHAR(MAX) NOT NULL,
+	TotalAllowance INT NOT NULL,
+	Used Int Not Null,
+	Remaining Int Not Null,
+	Colour NVARCHAR(200) NOT NULL, 
+	Icon NVARCHAR(MAX) NOT NULL ,
+	CreatedDateTime DATETIME NOT NULL,
+	CreatedByUserId UNIQUEIDENTIFIER NOT NULL,  
+	UpdatedDateTime DATETIME NULL,
+	UpdatedByUserId UNIQUEIDENTIFIER NULL, 
+	InActiveDateTime DATETIME NULL,
+	CONSTRAINT PK_Leavetype_Id PRIMARY KEY CLUSTERED(Id)
+)

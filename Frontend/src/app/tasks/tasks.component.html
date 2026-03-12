@@ -1,0 +1,61 @@
+<div class="flex flex-col h-full">
+    <div class="flex items-center justify-between p-6">
+        <div class="flex flex-col gap-2">
+            <div class="font-bold text-xl text-slate-900">
+                Task Board
+            </div>
+            <div class="font-bold text-sm text-slate-500">Manage project tasks and sprints</div>
+        </div>
+        <button (click)="isTaskFormOpened = true"
+            class="flex gap-2 items-center p-2 border border-slate-400 rounded-lg bg-primary-600 text-white shadow-lg shadow-primary-200">
+            <i class="fa fa-plus text-xs"></i>New Task</button>
+    </div>
+    <div class="flex flex-col min-h-0 flex-1 p-6">
+        <div class="flex  gap-2 justify-center flex-1 min-h-0" cdkDropListGroup>
+            <div *ngFor="let item of columns"
+                class="flex flex-col flex-1 min-h-0 border border-slate-300 rounded-md bg-slate-50 overflow-hidden">
+                <div
+                    class="p-2 border-b border-slate-200 font-bold text-slate-500 bg-white text-sm uppercase flex items-center justify-between">
+                    <div>{{item.name}}</div>
+                    <div
+                        class="rounded-full text-xs bg-slate-100 border border-slate-100 w-5 h-5 flex items-center justify-center">
+                        <span>{{item?.tasks?.length}}</span></div>
+                </div>
+                <div class="flex-1 overflow-auto p-2" cdkDropList [cdkDropListData]="item.tasks"
+                    (cdkDropListDropped)="drop($event)">
+                    <ng-container *ngIf="item.tasks && item.tasks.length > 0">
+                        <div *ngFor="let task of item.tasks" cdkDrag
+                            class="rounded-lg border border-slate-200 hover:shadow-sm shadow-slate-200 bg-white p-3 group cursor-pointer flex flex-col space-y-2">
+                            <div class="flex items-center justify-between">
+                                <div [ngClass]="getPriorityBadge(task.priority)"
+                                    class="text-sm font-bold rounded-lg px-2">
+                                    {{getPriority(task.priority)}}
+                                </div>
+                                <div class="group">
+                                    <button (click)="upsertSpentTime(task)"
+                                        [ngClass]="task.isRunningTask ?  'bg-white text-rose-500 hover:border-rose-200 hover:bg-rose-100 shadow-rose-200 w-7 h-7 rounded-full border border-rose-200' 
+                                        : 'bg-white text-emerald-600 border border-emerald-200 hover:bg-emerald-50 hover:border-emerald-300 w-7 h-7 rounded-full'">
+                                        <i class="text-xs"
+                                            [ngClass]="task.isRunningTask ? 'fa fa-stop ps-0.5 text-[12px]' : 'fa fa-play ps-0.5'"></i>
+                                    </button>
+                                    <button class="p-2 group-hover:opacity-100 opacity-0" (click)="editClicked(task)">
+                                        <i class="fa fa-pencil text-sm font-bold text-slate-400 cursor-pointer "></i>
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div class="font-bold text-slate-700 text-sm truncate">{{task.taskName}}</div>
+                            <div class="flex items-center justify-between">
+                                <div class="w-7 h-7 flex items-center justify-center bg-primary-100 border-primary-100 text-primary-500 rounded-full"
+                                    title="{{task.userName}}">{{task.userName[0]}}</div>
+                                <div class="fle items-center gap-2"> <i class="fa fa-clock font-sm text-slate-300"></i>
+                                    {{task.dueDate | date:'MMM,d'}}</div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-task-form *ngIf="isTaskFormOpened" (popupClosed)="popupClosed($event)" [data]="data"></app-task-form>

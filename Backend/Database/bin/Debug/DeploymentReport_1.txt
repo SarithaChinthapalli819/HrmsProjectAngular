@@ -1,0 +1,47 @@
+﻿** Highlights
+     Tables that will be recreated with data migrated
+       [dbo].[UserRole]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[UserRole].[CreateByDateTime] is being dropped, data loss could occur.
+       The column [dbo].[UserRole].[CreateByUserId] is being dropped, data loss could occur.
+       The column [dbo].[UserRole].[CreatedByDateTime] on table [dbo].[UserRole] must be added, but the column has no default
+         value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue
+         you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of
+         smart-defaults as a deployment option.
+       The column [dbo].[UserRole].[CreatedByUserId] on table [dbo].[UserRole] must be added, but the column has no default
+         value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue
+         you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of
+         smart-defaults as a deployment option.
+       The column [dbo].[UserRole].[UserId] on table [dbo].[UserRole] must be added, but the column has no default value and
+         does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+
+** User actions
+     Drop
+       [dbo].[FK_Employee_UserId] (Foreign Key)
+     Recreate table
+       [dbo].[UserRole] (Table)
+     Create
+       [dbo].[Users] (Table)
+       [dbo].[FK_Role_UserId] (Foreign Key)
+       [dbo].[FK_Employee_UserId] (Foreign Key)
+       [dbo].[GetUserDetailsWithUsername] (Procedure)
+       [dbo].[UpsertUser] (Procedure)
+
+** Supporting actions
+     Drop
+       [dbo].[FK_User_Role] (Foreign Key)
+     Create
+       [dbo].[FK_User_Role] (Foreign Key)
+
+The column [dbo].[UserRole].[CreateByDateTime] is being dropped, data loss could occur.
+The column [dbo].[UserRole].[CreateByUserId] is being dropped, data loss could occur.
+The column [dbo].[UserRole].[CreatedByDateTime] on table [dbo].[UserRole] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[UserRole].[CreatedByUserId] on table [dbo].[UserRole] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[UserRole].[UserId] on table [dbo].[UserRole] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+

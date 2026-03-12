@@ -1,0 +1,73 @@
+<div class="min-h-screen flex items-center justify-center">
+    <form [formGroup]="loginCred" (ngSubmit)="login()">
+ <div class="auth-card w-[480px]">
+        <div class="flex flex-col items-center justify-center mb-10">
+            <span class="text-primary-600 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-box">
+                    <path
+                        d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+                    <path d="m3.3 7 8.7 5 8.7-5" />
+                    <path d="M12 22V12" />
+                </svg>
+            </span>
+            <span class="font-extrabold text-xl text-slate-900 tracking-tight">
+                Welcome Back
+            </span>
+            <span class="text-sm text-slate-400 font-bold mt-2">Continue your journey with HRMS Pro</span>
+        </div>
+        <div class="mb-3">
+            <label class="uppercase tracking-wider text-slate-500 text-xs font-bold">Username</label>
+            <div class="relative mt-1">
+                <input class="form-input-pro pl-12" placeholder="Enter your credentials" formControlName="userName"/>
+                <i class="fa fa-user absolute top-1/2 -translate-y-1/2 left-3 text-slate-300"></i>
+            </div>
+        </div>
+         <div class="ml-1 text-xs font-bold mb-3"> 
+            <span class="text-rose-600" *ngIf="loginCred.get('userName')?.touched && loginCred.get('userName')?.hasError('required')">
+                UserName Is Required
+            </span> 
+        </div>
+        <div class="mb-3">
+            <div class="flex items-center justify-between mb-2">
+                <label class="uppercase tracking-wider text-slate-500 text-xs font-bold">Password</label>
+                <div class="text-primary-500 text-xs font-bold">Forgot Password?</div>
+            </div>
+
+            <div class="relative">
+                <input class="form-input-pro pl-12" placeholder="••••••••" formControlName="password" />
+                <i class="fa fa-lock absolute top-1/2 -translate-y-1/2 left-3 text-slate-300"></i>
+            </div>
+
+        </div>
+        <div class="ml-1 text-xs font-bold mb-3"> 
+            <span class="text-rose-600" *ngIf="loginCred.get('password')?.touched && loginCred.get('password')?.hasError('required')">
+                Password Is Required
+            </span> 
+            <span class="text-rose-600" *ngIf="loginCred.get('password').touched && loginCred.get('password').hasError('pattern')">
+                Password must be strong (8+ chars with upper, lower, number & symbol)
+            </span>
+        </div>
+        <div class="mb-4 flex items-center gap-2">
+            <input class="checkbox" type="checkbox" />
+            <label class="tracking-tight text-slate-500 text-xs font-bold">Keep me signed in</label>
+        </div>
+        <button class="btn-primary-pro " type="submit" [disabled]="loginCred.invalid">
+            Sign In <i class="fa fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
+        </button>
+        <div class="flex items-center justify-center font-bold text-sm gap-2 mt-4">
+            <span class="text-slate-500">
+                New to the platform?
+            </span>
+            <a class="text-primary-500" routerLink="/auth/register" >
+                Request Access
+            </a>
+        </div>
+        <div class="flex items-center justify-center tracking-wider text-slate-300 text-xs font-bold mt-6">
+            Enterprise Security • SSL Encrypted
+        </div>
+    </div>
+    </form>
+    
+</div>

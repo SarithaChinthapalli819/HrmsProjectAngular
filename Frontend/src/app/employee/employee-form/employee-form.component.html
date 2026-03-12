@@ -1,0 +1,122 @@
+<div class="backdrop-blur-sm bg-slate-300/50 fixed inset-0 flex items-center justify-center">
+    <div class="bg-white rounded-[2rem] shadow-2xl w-full max-w-2xl overflow-hidden flex flex-col max-h-[90vh]">
+        <div class="flex item justify-between p-9 border border-b border-slate-100 pb-4">
+            <div class="flex flex-col gap-2">
+                <h1 class="font-bold text-slate-900 text-3xl tracking-tighter">Add New Employee</h1>
+                <span class="text-slate-400 font-bold text-sm uppercase">Personal Information</span>
+            </div>
+            <button (click)="closeForm(false)">
+                <i class="fa fa-times text-xl text-slate-500"></i>
+            </button>
+        </div>
+        <form [formGroup]="userForm" (ngSubmit)="upsertEmployee()" class="flex flex-col flex-1 overflow-hidden">
+            <div class="flex-1 space-y-6 p-9 pt-3 overflow-y-auto">
+                <div class="grid grid-cols-2 gap-2">
+                    <div class="flex flex-col gap-2 font-bold text-slate-500 text-xs space-y-2">
+                        <label class="uppercase tracking-wider">First Name</label>
+                        <input class="form-input-pro placeholder:font-bold placeholder:text-slate-300"
+                            placeholder="eg:john" formControlName="firstName" />
+                    </div>
+                    <div class="flex flex-col gap-2 font-bold text-slate-500 text-xs space-y-2">
+                        <label class="uppercase tracking-wider">Last Name</label>
+                        <input class="form-input-pro placeholder:font-bold placeholder:text-slate-300" placeholder="doe"
+                            formControlName="lastName" />
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <div class="flex flex-col gap-2 font-bold text-slate-500 text-xs space-y-2">
+                        <label class="uppercase tracking-wider">User Name</label>
+                        <input class="form-input-pro placeholder:font-bold placeholder:text-slate-300"
+                            placeholder="User name" formControlName="userName" />
+                    </div>
+                    <div class="flex flex-col gap-2 font-bold text-slate-500 text-xs space-y-2">
+                        <label class="uppercase tracking-wider">Employee Code</label>
+                        <input class="form-input-pro placeholder:font-bold placeholder:text-slate-300" placeholder="Em1"
+                            formControlName="employeeCode" />
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2">
+                    <div class="flex flex-col gap-2 font-bold text-slate-500 text-xs space-y-2">
+                        <label class="uppercase tracking-wider">Email Adress</label>
+                        <input class="form-input-pro placeholder:font-bold placeholder:text-slate-300"
+                            placeholder="Email Adress" formControlName="email" />
+                    </div>
+                    <div class="flex flex-col gap-2 font-bold text-slate-500 text-xs space-y-2">
+                        <label class="uppercase tracking-wider">Role</label>
+                        <select class="form-input-pro placeholder:font-bold placeholder:text-slate-300"
+                            formControlName="roleId">
+                            <ng-container *ngFor="let item of rolesList">
+                                <option [value]="item.id">{{item.roleName}}</option>
+                            </ng-container>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2">
+                    <div class="flex flex-col gap-2 font-bold text-slate-500 text-xs space-y-2">
+                        <label class="uppercase tracking-wider">Department</label>
+                        <select class="form-input-pro placeholder:font-bold placeholder:text-slate-300"
+                            formControlName="departmentId">
+                            <ng-container *ngFor="let item of departmentList">
+                                <option [value]="item.id">{{item.departmentName}}</option>
+                            </ng-container>
+
+                        </select>
+                    </div>
+                    <div class="flex flex-col gap-2 font-bold text-slate-500 text-xs space-y-2">
+                        <label class="uppercase tracking-wider">Designation</label>
+                        <select class="form-input-pro placeholder:font-bold placeholder:text-slate-300"
+                            formControlName="designationId">
+                            <ng-container *ngFor="let item of designationList">
+                                <option [value]="item.id">{{item.designationName}}</option>
+                            </ng-container>
+
+                        </select>
+                    </div>
+                </div>
+                <!-- <div class="space-y-6">
+                    <div class="flex items-center gap-2 font-bold text-slate-500 text-sm">
+                        <input type="checkbox" [(ngModel)]="isResetPasswordClicked"
+                            (change)="isResetPasswordClicked = !isResetPasswordClicked" />Reset Password
+                    </div>
+                    <div *ngIf="isResetPasswordClicked">
+                        <div class="flex flex-col gap-2 font-bold text-slate-500 text-xs">
+                            <div class="space-y-2">
+                                <label class="uppercase tracking-wider">Reset Password</label>
+                                <input class="form-input-pro placeholder:font-bold placeholder:text-slate-400"
+                                    placeholder="Enter Password for user" />
+
+                            </div>
+                            <span class="font-bold text-xs text-slate-300 mt-1">User will login with Email (username)
+                                and
+                                this
+                                password.</span>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="grid grid-cols-2 gap-2">
+                    <div class="flex flex-col gap-2 font-bold text-slate-500 text-xs space-y-2">
+                        <label class="uppercase tracking-wider">Joining Date</label>
+                        <input type="date" class="form-input-pro placeholder:font-bold placeholder:text-slate-300"
+                            formControlName="joiningDate" placeholder="eg:john" />
+                    </div>
+                    <div class="flex flex-col gap-2 font-bold text-slate-500 text-xs space-y-2">
+                        <label class="uppercase tracking-wider">Status</label>
+                        <select class="form-input-pro placeholder:font-bold placeholder:text-slate-300" formControlName="isActive">
+                            <ng-container *ngFor="let item of statusList">
+                                <option [ngValue]="item.id">{{item.name}}</option>
+                            </ng-container>
+                        </select>
+                    </div>
+                </div>
+            </div>
+             <div class="flex items-center gap-2 shrink-0 bg-white border-t border-slate-100 p-7">
+            <button (click)="closeForm(false)" type="button"
+                class="border border-slate-100 py-4 bg-slate-100 hover:bg-slate-200 shadow-sm rounded-2xl p-3 text-slate-600 font-bold text-sm flex-1">Cancel</button>
+            <button class="btn-primary-pro flex-1" [disabled]="userForm.invalid">Create Employee</button>
+        </div>
+        </form>
+       
+    </div>
+</div>
