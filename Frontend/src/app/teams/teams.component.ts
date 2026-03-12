@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { TeamsService } from '../core/teams.service';
 
 @Component({
-  selector: 'app-teams',
-  templateUrl: './teams.component.html'
+    selector: 'app-teams',
+    templateUrl: './teams.component.html',
+    standalone: false
 })
 export class TeamsComponent implements OnInit{
   data:any;

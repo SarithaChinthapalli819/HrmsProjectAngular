@@ -4,8 +4,9 @@ import { Leaves } from '../Models/leaves.model';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-leaves',
-  templateUrl: './leaves.component.html'
+    selector: 'app-leaves',
+    templateUrl: './leaves.component.html',
+    standalone: false
 })
 export class LeavesComponent implements OnInit{
   selectedTab = "overview";

@@ -4,8 +4,9 @@ import { AuthService } from '../../core/auth.serive';
 import { User } from '../../Models/User.model';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html'
+    selector: 'app-register',
+    templateUrl: './register.component.html',
+    standalone: false
 })
 export class RegisterComponent {
 

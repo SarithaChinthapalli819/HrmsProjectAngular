@@ -6,8 +6,9 @@ import { TeamsService } from '../../core/teams.service';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-team-form',
-  templateUrl: './team-form.component.html'
+    selector: 'app-team-form',
+    templateUrl: './team-form.component.html',
+    standalone: false
 })
 export class TeamFormComponent implements OnInit {
   constructor(private authService: AuthService,private teamsService : TeamsService,private toaster:ToastrService) {

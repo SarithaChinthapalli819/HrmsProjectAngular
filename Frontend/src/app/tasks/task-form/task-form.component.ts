@@ -8,8 +8,9 @@ import { Teams } from '../../Models/Teams.model';
 import { TeamsService } from '../../core/teams.service';
 
 @Component({
-  selector: 'app-task-form',
-  templateUrl: './task-form.component.html'
+    selector: 'app-task-form',
+    templateUrl: './task-form.component.html',
+    standalone: false
 })
 export class TaskFormComponent implements OnInit{
   

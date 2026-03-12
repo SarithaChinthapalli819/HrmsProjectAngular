@@ -2,8 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { AuthService } from '../core/auth.serive';
 
 @Component({
-  selector: 'app-employee',
-  templateUrl: './employee.component.html'
+    selector: 'app-employee',
+    templateUrl: './employee.component.html',
+    standalone: false
 })
 export class EmployeeComponent implements OnInit{
 

@@ -6,8 +6,9 @@ import { ProjectService } from '../../core/project.service';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-projects-form',
-  templateUrl: './projects-form.component.html'
+    selector: 'app-projects-form',
+    templateUrl: './projects-form.component.html',
+    standalone: false
 })
 export class ProjectsFormComponent implements OnInit {
   constructor(private teamService: TeamsService, private projectService: ProjectService, private toast: ToastrService) {

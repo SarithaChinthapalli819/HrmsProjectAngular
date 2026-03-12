@@ -5,8 +5,9 @@ import { TeamsService } from '../../core/teams.service';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-team-members',
-  templateUrl: './team-members.component.html'
+    selector: 'app-team-members',
+    templateUrl: './team-members.component.html',
+    standalone: false
 })
 export class TeamMembersComponent {
   constructor(private authService: AuthService,private teamService : TeamsService,private toaster:ToastrService) {

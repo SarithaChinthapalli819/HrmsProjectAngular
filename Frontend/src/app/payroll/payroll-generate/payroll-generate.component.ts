@@ -6,8 +6,9 @@ import { PayrollService } from '../../core/payroll.service';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-payroll-generate',
-  templateUrl: './payroll-generate.component.html'
+    selector: 'app-payroll-generate',
+    templateUrl: './payroll-generate.component.html',
+    standalone: false
 })
 export class PayrollGenerateComponent implements OnInit {
   userDetails = [];

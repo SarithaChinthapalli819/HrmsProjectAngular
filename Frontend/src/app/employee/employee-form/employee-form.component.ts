@@ -5,8 +5,9 @@ import { User } from '../../Models/User.model';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-employee-form',
-  templateUrl: './employee-form.component.html'
+    selector: 'app-employee-form',
+    templateUrl: './employee-form.component.html',
+    standalone: false
 })
 export class EmployeeFormComponent implements OnInit {
   constructor(private authService: AuthService, private toaster: ToastrService,private cdr : ChangeDetectorRef) {

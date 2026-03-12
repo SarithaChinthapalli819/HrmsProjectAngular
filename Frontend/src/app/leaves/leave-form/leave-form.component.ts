@@ -6,8 +6,9 @@ import { Leaves } from '../../Models/leaves.model';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-leave-form',
-  templateUrl: './leave-form.component.html'
+    selector: 'app-leave-form',
+    templateUrl: './leave-form.component.html',
+    standalone: false
 })
 export class LeaveFormComponent implements OnInit {
   leaveTypes = [];

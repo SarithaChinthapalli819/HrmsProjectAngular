@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { TimesheetService } from '../core/timesheet.service';
 
 @Component({
-  selector: 'app-timesheet',
-  templateUrl: './timesheet.component.html'
+    selector: 'app-timesheet',
+    templateUrl: './timesheet.component.html',
+    standalone: false
 })
 export class TimesheetComponent implements OnInit {
   constructor(private timesheetService: TimesheetService) {

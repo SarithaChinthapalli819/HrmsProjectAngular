@@ -4,8 +4,9 @@ import { AttendanceModel } from '../Models/attendance.model';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-attendance',
-  templateUrl: './attendance.component.html'
+    selector: 'app-attendance',
+    templateUrl: './attendance.component.html',
+    standalone: false
 })
 export class AttendanceComponent implements OnInit{
   constructor(private attendanceService: AttendanceService,private toast:ToastrService) {

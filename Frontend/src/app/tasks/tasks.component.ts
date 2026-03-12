@@ -6,8 +6,9 @@ import { ToastrService } from 'ngx-toastr';
 import { TaskSpenTimeModel } from '../Models/task-spenTime-model';
 
 @Component({
-  selector: 'app-tasks',
-  templateUrl: './tasks.component.html'
+    selector: 'app-tasks',
+    templateUrl: './tasks.component.html',
+    standalone: false
 })
 export class TasksComponent implements OnInit {
   constructor(private tasksService: TasksService, private taost: ToastrService) {

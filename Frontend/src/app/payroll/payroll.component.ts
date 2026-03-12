@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { PayrollService } from '../core/payroll.service';
 
 @Component({
-  selector: 'app-payroll',
-  templateUrl: './payroll.component.html'
+    selector: 'app-payroll',
+    templateUrl: './payroll.component.html',
+    standalone: false
 })
 export class PayrollComponent implements OnInit{
   constructor(private payrollService : PayrollService){
